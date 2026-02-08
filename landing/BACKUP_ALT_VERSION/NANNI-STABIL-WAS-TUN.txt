@@ -1,0 +1,60 @@
+============================================
+NANNI STABIL – WAS DU TUN MUSST
+============================================
+
+Damit Nanni dauerhaft stabil läuft und alle Infos (Ring, Patch, Vibration, Schlafapnoe, Hormone) gibt:
+
+--------------------------------------------
+1. IMMER ÜBER HTTPS ODER LOCALHOST ÖFFNEN
+--------------------------------------------
+• Nicht: index.html doppelklicken (file://)
+• Sondern: Einen lokalen Server starten und die Seite im Browser öffnen.
+
+So startest du den Server:
+  • LAUFEN.bat doppelklicken (wenn vorhanden)
+  • ODER im Ordner im Terminal: python -m http.server 5000
+  • Dann im Browser: http://localhost:5000
+  • ODER: NUR-SERVER-STARTEN.bat / SERVER-PYTHON.bat (je nach Projekt)
+
+Warum: Mikrofon und manche Skripte (z.B. nanni-config.js) funktionieren nur über http(s), nicht über file://.
+
+--------------------------------------------
+2. NANNI-CONFIG.JS MUSS IM GLEICHEN ORDNER WIE INDEX.HTML LIEGEN
+--------------------------------------------
+• Datei: nanni-config.js (nicht nur nanni-config.example.js)
+• Darin muss stehen: window.NANNI_GROQ_KEY = 'gsk_...';
+• Dein Groq-Key beginnt mit gsk_
+
+Wenn nanni-config.js fehlt: nanni-config.example.js kopieren, umbenennen zu nanni-config.js, Key eintragen.
+
+--------------------------------------------
+3. BROWSER: MIKROFON ERLAUBEN
+--------------------------------------------
+• Beim ersten Start auf "Mikrofon erlauben" klicken (oder in den Browser-Einstellungen für diese Seite erlauben).
+• Bei Chrome/Edge: Schloss- oder Info-Symbol in der Adresszeile → Website-Einstellungen → Mikrofon: Erlauben.
+
+--------------------------------------------
+4. SEITE NEU LADEN NACH ÄNDERUNGEN
+--------------------------------------------
+• Nach Änderungen an nanni-config.js oder index.html: F5 oder Strg+R (Seite neu laden).
+• Kein Cache: Strg+Shift+R (hard reload), falls etwas hängt.
+
+--------------------------------------------
+5. WENN NANNI IMMER NOCH DASSELBE SAGT ODER KEINE DETAILS
+--------------------------------------------
+• Prüfen: Wird nanni-config.js geladen? (Browser: F12 → Konsole → keine Fehler wie "nanni-config.js 404"?)
+• Prüfen: Steht in nanni-config.js ein gültiger Key (beginnt mit gsk_)?
+• Dann: Seite mit Strg+Shift+R neu laden, Nanni starten, eine konkrete Frage stellen (z.B. "Was macht der Ring bei Stress?" oder "Wie hilft es bei Schlafapnoe?").
+
+--------------------------------------------
+KURZ-CHECKLISTE
+--------------------------------------------
+[ ] Seite über http://localhost:... oder HTTPS geöffnet (nicht file://)
+[ ] nanni-config.js existiert im gleichen Ordner wie index.html
+[ ] In nanni-config.js steht: window.NANNI_GROQ_KEY = 'gsk_...';
+[ ] Mikrofon für die Seite erlaubt
+[ ] Seite nach Änderungen neu geladen (F5 oder Strg+Shift+R)
+
+Wenn alle Punkte erfüllt sind, läuft Nanni mit Groq und gibt alle Infos (Vibration, Ring, Patch, Schlafapnoe, Hormone) detailliert wieder.
+
+============================================

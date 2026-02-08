@@ -1,0 +1,50 @@
+===============================================
+NANIL PULSE - UPLOAD ANLEITUNG (FINAL)
+===============================================
+
+AKTUELLER STATUS:
+✅ FERTIG in FINAL_UPLOAD (korrigierte Links):
+   - index1.html (Konzept DE)
+   - en.html (Konzept EN)
+   - tr.html (Konzept TR)
+   - kontakt.html (Kontakt DE)
+   - kontakt-en.html (Kontakt EN)
+   - kontakt-tr.html (Kontakt TR)
+   - system-notes.html (System Notes DE)
+   - system-notes-en.html (System Notes EN)
+   - system-notes-tr.html (System Notes TR)
+
+❌ MUSST DU NOCH KOPIEREN (aus dem übergeordneten Ordner):
+   
+   1. index.html (88 KB Hauptseite - ERST PFAD KORRIGIEREN!)
+      WICHTIG: In Zeile 190 ändern:
+      VON: src="landing/final-zeichnung.jpg.jpeg"
+      ZU:  src="final-zeichnung.jpg.jpeg"
+   
+   2. CSS-Dateien:
+      - style.css
+      - landing.css
+   
+   3. JavaScript:
+      - script.js
+      - nanni-config.js
+   
+   4. Weitere HTML-Seiten:
+      - agb.html
+      - datenschutz.html
+      - impressum.html
+      - co-founder.html
+      - danke.html
+      - early-access.html
+      - investoren.html
+      - promo.html
+   
+   5. GANZEN Ordner:
+      - assets (komplett kopieren!)
+   
+   6. Aus dem "landing"-Unterordner:
+      - final-zeichnung.jpg.jpeg (direkt in FINAL_UPLOAD!)
+
+FERTIG! Dann den ganzen FINAL_UPLOAD Inhalt auf GitHub hochladen.
+
+===============================================

@@ -1,0 +1,35 @@
+========================================
+  NANNI – Wenn es nicht mehr funktioniert
+========================================
+
+Nanni funktioniert nicht mehr? Prüfe nacheinander:
+
+1. SEITE NEU LADEN (F5)
+   Oft reicht das.
+
+2. SERVER LÄUFT?
+   START-JETZT.bat oder SERVER-HIER.bat starten.
+   Fenster offen lassen. http://localhost:5000 öffnen.
+
+3. HTTP NICHT HTTPS
+   localhost:5000 mit http:// (nicht https://)
+
+4. BROWSER
+   Chrome oder Edge. Andere Browser können Probleme machen.
+
+5. GROQ-KEY (wenn Nanni auf alle Fragen antworten soll)
+   nanni-config.js muss existieren und den Key enthalten.
+   Siehe nanni-config.example.js – kopieren zu nanni-config.js,
+   Key eintragen. Key von https://console.groq.com
+
+6. MIKROFON
+   Browser-Einstellungen: Mikrofon für localhost erlauben.
+
+7. INTERNET (bei Groq)
+   Groq braucht Internet. Ohne: nur Stichwort-Antworten.
+
+========================================
+Nichts hilft? Dateien nicht geändert?
+Dann: BACKUP_ALT_VERSION Ordner behalten,
+START-JETZT.bat nutzen – das ist die stabile Version.
+========================================

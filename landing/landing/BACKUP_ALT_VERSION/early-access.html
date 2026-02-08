@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANIL Pulse - Early Access</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+    <style>
+        .lang-btn.active {
+            background: rgba(212, 175, 55, 0.25);
+            color: #D4AF37;
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+    </style>
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; background: var(--bg-dark);">
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.jpg" alt="Logo" id="logo-img">
+                <span class="text-gradient-gold" id="logo-text">NANIL Pulse</span>
+            </a>
+            <div class="nav-wrapper">
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html" id="nav-back" class="btn-back-home">Zurück zur Startseite</a></li>
+                    </ul>
+                </nav>
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">DE</button>
+                    <button class="lang-btn">EN</button>
+                    <button class="lang-btn">TR</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 120px 20px 60px;">
+        <div class="container" style="max-width: 600px;">
+            <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                <h1 class="text-gradient-gold" style="font-size: 3rem; margin-bottom: 15px;" data-i18n="early-title">
+                    Early Access</h1>
+                <p style="color: var(--text-muted); font-size: 1.1rem;" data-i18n="early-subtitle">
+                    Sichern Sie sich Ihren Platz auf der exklusiven Warteliste für die erste Auslieferung der NANIL
+                    Pulse Kollektion.
+                </p>
+            </div>
+
+            <!-- Pre-order Form -->
+            <form class="contact-form" id="early-access-form" action="https://formspree.io/f/xreezyov" method="POST"
+                style="background: var(--bg-card); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); box-shadow: var(--shadow-xl);">
+                <input type="hidden" name="_subject" value="Neue Early Access Registrierung">
+
+                <div class="form-group">
+                    <label id="label-name"
+                        style="color: var(--gold-primary); font-weight: 600; margin-bottom: 8px; display: block;">Vollständiger
+                        Name</label>
+                    <input type="text" name="name" placeholder="Name" required
+                        style="width: 100%; border-radius: 10px;">
+                </div>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label id="label-email"
+                        style="color: var(--gold-primary); font-weight: 600; margin-bottom: 8px; display: block;"
+                        data-i18n="label-email">E-Mail-Adresse</label>
+                    <input type="email" name="email" placeholder="Email" required
+                        style="width: 100%; border-radius: 10px;">
+                </div>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label id="label-interest"
+                        style="color: var(--gold-primary); font-weight: 600; margin-bottom: 8px; display: block;">Interesse
+                        an:</label>
+                    <select name="product" required
+                        style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; cursor: pointer;">
+                        <option value="gold-ring">GoldRing Edition</option>
+                        <option value="silver-ring">SilverRing Classic</option>
+                        <option value="biopatch">BioPatch Essential</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="margin-top: 30px;">
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1rem;"
+                        data-i18n="btn-register">
+                        Jetzt registrieren
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer style="padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container" style="text-align: center;">
+            <p id="footer-copy" style="color: #666; font-size: 0.9rem;" data-i18n="footer-copy">&copy; 2026 NANIL Pulse
+                - Alle Rechte
+                vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Script included -->
+    <script src="script.js"></script>
+    <!-- Nanni Assistant Script (Vapi) -->
+    <script type="module">
+        import Vapi from "https://esm.sh/@vapi-ai/web";
+
+        const publicKey = '946075e5-8ecc-45cb-9daf-7a22a29983e7';
+        const assistantId = '019159c3-7186-4c40-9a80-d62d04251216';
+
+        const vapi = new Vapi(publicKey);
+        let isActive = false;
+
+        const btn = document.getElementById('start-vapi-btn');
+        const orb = document.getElementById('vapi-orb');
+        const statusText = document.getElementById('nanni-status');
+
+        async function toggleCall() {
+            if (isActive) {
+                vapi.stop();
+                return;
+            }
+
+            try {
+                if (statusText) statusText.innerText = "Frage Mikrofon an...";
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                stream.getTracks().forEach(t => t.stop());
+
+                if (statusText) statusText.innerText = "Verbindung wird aufgebaut...";
+                vapi.start(assistantId);
+            } catch (err) {
+                if (statusText) statusText.innerText = "Fehler: Mikrofonzugriff verweigert.";
+            }
+        }
+
+        vapi.on('call-start', () => {
+            isActive = true;
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-stop"></i> ' + (window.getTranslation ? window.getTranslation('btn_stop_voice') : 'Nanni stoppen');
+                btn.style.background = "#ff5e62";
+            }
+            if (orb) {
+                orb.classList.add('active', 'speaking');
+                orb.style.boxShadow = "0 0 50px #00bcd4";
+            }
+            if (statusText) statusText.innerText = "Nanni hört zu...";
+        });
+
+        vapi.on('call-end', () => {
+            isActive = false;
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-microphone"></i> ' + (window.getTranslation ? window.getTranslation('btn_start_voice') : 'Nanni starten');
+                btn.style.background = "";
+            }
+            if (orb) {
+                orb.classList.remove('active', 'speaking');
+                orb.style.boxShadow = "";
+            }
+            if (statusText) statusText.innerText = "Bereit für das nächste Gespräch.";
+        });
+
+        vapi.on('error', (e) => {
+            console.error(e);
+            if (statusText) statusText.innerText = "Verbindung unterbrochen. Bitte neu starten.";
+            isActive = false;
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-microphone"></i> ' + (window.getTranslation ? window.getTranslation('btn_start_voice') : 'Nanni starten');
+                btn.style.background = "";
+            }
+            if (orb) orb.classList.remove('active', 'speaking');
+        });
+
+        if (btn) btn.onclick = toggleCall;
+        if (orb) orb.onclick = toggleCall;
+    </script>
+</body>
+
+</html>

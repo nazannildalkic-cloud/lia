@@ -1,0 +1,20 @@
+========================================
+  SEITE OEFFNEN – ZWEI WEGE
+========================================
+
+WEG 1 (ohne Server – Seite zeigt sich sofort):
+   → SEITE-OEFFNEN.bat doppelklicken
+   → ODER: index.html doppelklicken
+   Nanni funktioniert so NICHT (braucht localhost).
+
+WEG 2 (mit Server – Nanni funktioniert):
+   → START-JETZT.bat doppelklicken
+   → Schwarzes Fenster NICHT schliessen
+   → Browser oeffnet http://localhost:5000
+
+Wenn WEG 2 nicht geht:
+   Python installieren: https://www.python.org/downloads/
+   Bei Installation: "Add Python to PATH" ankreuzen.
+   PC neu starten. Dann START-JETZT.bat erneut.
+
+========================================

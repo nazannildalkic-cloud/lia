@@ -1,0 +1,20 @@
+========================================
+  NANIL PULSE – JETZT STARTEN
+========================================
+
+*** NEU: SERVER-HIER.bat nutzen! ***
+
+1. SERVER-HIER.bat doppelklicken
+   (bedient NUR diesen Ordner – keine Verwechslung mehr!)
+
+2. Schwarzes Fenster NICHT schliessen
+
+3. Browser oeffnet: http://localhost:5000
+   (Port 5000 – die finale Seite: Obsidian & Turquoise)
+
+4. Zu "Frag Nanni" scrollen, auf "Nanni starten" klicken
+   Mikrofon erlauben – Nanni spricht
+
+========================================
+Keine anderen Seiten mehr – nur die finale!
+========================================

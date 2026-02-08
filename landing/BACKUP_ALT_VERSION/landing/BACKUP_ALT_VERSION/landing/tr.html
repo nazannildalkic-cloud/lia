@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanil Pulse — Bağlam için Bir Sistem</title>
+    <meta name="description" content="Nanil bir giyilebilir değil. Sensörlerden bağlam türeten uygulama öncelikli bir sistem.">
+    <link rel="icon" type="image/jpeg" href="../assets/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <style>
+:root{--bg:#3a4149;--card:#3d4450;--text:#f5f5f5;--muted:#9ea2aa;--accent:#d4af6a;--turquoise:#5d9aa8;--turquoise-light:#7eb8c4;--border:rgba(255,255,255,.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);background-image:linear-gradient(to bottom,rgba(255,255,255,.04) 0%,rgba(255,255,255,.01) 12vh,transparent 28vh),radial-gradient(ellipse 100% 80% at 50% 5%,rgba(93,154,168,.05) 0%,transparent 50%),radial-gradient(ellipse 100% 60% at 50% 0%,rgba(45,50,60,.4) 0%,transparent 60%);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 32px;background:rgba(58,65,73,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.logo-link img{height:36px;opacity:.9}
+.lang-switcher{display:flex;gap:20px;font-size:14px;font-weight:500}
+.lang-switcher a{color:var(--muted);text-decoration:none}
+.lang-switcher a.active{color:var(--turquoise)}
+.lang-switcher a:hover{color:var(--turquoise-light)}
+main{max-width:900px;margin:0 auto;padding:240px 24px 80px}
+.top-line{text-align:center;font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);opacity:.88;margin-bottom:88px}
+section{padding-top:120px}
+main>.image-box+section{padding-top:64px}
+h1,h2{font-family:"Playfair Display",serif;font-weight:500;letter-spacing:.02em;color:var(--text)}
+h1{font-size:64px;font-weight:600;line-height:1.1;margin-bottom:32px;letter-spacing:-.02em}
+h2{font-size:32px;margin-bottom:32px;line-height:1.3}
+p{color:var(--muted);font-size:17px;line-height:1.7;max-width:640px;margin-bottom:16px}
+.bold{color:var(--text);font-weight:500}
+.disclaimer{margin-top:28px;font-size:12px;color:var(--turquoise);font-weight:500;letter-spacing:.05em;text-transform:uppercase}
+main>.top-line+.image-box{max-width:572px;height:385px;margin:0 auto 80px;box-shadow:0 36px 72px rgba(0,0,0,.1),0 18px 44px rgba(0,0,0,.06)}
+.image-box{position:relative;width:100%;max-width:480px;height:320px;margin:0 auto 80px;display:flex;align-items:center;justify-content:center;background:var(--card);border:1px solid rgba(93,154,168,.2);border-radius:24px;overflow:hidden;box-shadow:0 20px 48px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.1)}
+.image-box img{width:100%;height:100%;object-fit:contain}
+.system-section .image-box{margin:56px auto 80px}
+.cta{text-align:left;padding-top:120px}
+.cta-form{max-width:400px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:6px}
+.form-group input,.form-group textarea{width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:.95rem}
+.form-group textarea{min-height:100px;resize:vertical}
+.cta-btn{display:inline-block;padding:16px 40px;border-radius:999px;border:1.5px solid var(--accent);color:var(--accent);background:transparent;font-size:15px;font-weight:500;cursor:pointer;font-family:inherit}
+.cta-btn:hover{background:var(--accent);color:var(--bg)}
+.secondary-link{display:inline-flex;margin-top:24px;padding:14px 28px;font-size:15px;font-weight:600;color:var(--turquoise);text-decoration:none;border:1.5px solid var(--turquoise);border-radius:999px}
+.secondary-link:hover{color:var(--bg);background:var(--turquoise)}
+footer{text-align:center;padding:80px 24px 40px;color:var(--muted);font-size:14px}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--turquoise-light)}
+footer a[href*="system-notes"]{color:var(--turquoise);font-weight:500}
+.footer-disclaimer{font-size:12px;margin-top:16px;opacity:.9}
+@media(max-width:640px){main{padding:180px 20px 60px}.top-line{margin-bottom:64px;font-size:8px;letter-spacing:.28em}main>.top-line+.image-box{max-width:100%;height:288px;margin-bottom:64px}h1{font-size:42px}}
+    </style>
+</head>
+<body style="background:#3a4149;color:#f5f5f5">
+    <header>
+        <a href="../index.html" class="logo-link" aria-label="Nanil Pulse – Ana sayfa"><img src="../assets/logo.jpg" alt="Nanil Pulse"></a>
+        <div class="lang-switcher">
+            <a href="index.html">DE</a>
+            <a href="en.html">EN</a>
+            <a href="tr.html" class="active">TR</a>
+        </div>
+    </header>
+    <main>
+        <p class="top-line">Erken Aşama Sistem Projesi</p>
+        <div class="image-box"><img src="../assets/ring-patch.jpg.jpeg" alt="Nanil Yüzük ve Patch Sistemi"></div>
+        <section>
+            <h1>Nanil bir giyilebilir değil.<br>Bir sistem.</h1>
+            <p>Sensörlerden bağlam türeten ve günlük yaşamdaki ilişkileri görünür kılan uygulama öncelikli bir sistem.</p>
+            <p class="disclaimer">İyilik odaklı. Tıbbi değil.</p>
+        </section>
+        <section class="system-section">
+            <h2>Sistemi nasıl düşünüyoruz</h2>
+            <div class="image-box"><img src="../assets/zeichnung.jpg.jpeg" alt="Nanil sistem mantığı – Uygulama merkez"></div>
+            <p>Uygulama merkezi sistemdir.<br>Yüzük ve patch ham veri sağlar.</p>
+            <p>Değer tek tek değerlerden değil, bunların birbirleriyle ilişkisinden doğar.</p>
+        </section>
+        <section>
+            <h2>Farklılaşma</h2>
+            <p class="bold">Nanil artık sadece ölçmüyor.<br>Nanil farklı yorumluyor.</p>
+            <p>İzole KPI'lara odak yok.<br>Günlük değerlere optimize etme yok.<br>Zaman, bağlam ve davranış üzerinden kalıplar.</p>
+        </section>
+        <section>
+            <h2>Durum</h2>
+            <p class="bold">Nanil erken aşama bir projedir.</p>
+            <p>Sistem mimarisi hazır.<br>Önce uygulama geliştiriliyor.<br>Sistem taşıdığında donanım gelir.</p>
+        </section>
+        <section class="cta">
+            <p class="bold">Sistemle ilgileniyor musunuz?</p>
+            <form class="cta-form" action="https://formspree.io/f/xreezyov" method="POST">
+                <input type="hidden" name="_subject" value="Landing Page TR – İletişim talebi">
+                <input type="hidden" name="_next" value="../danke.html">
+                <div class="form-group">
+                    <label for="landing-name">Ad</label>
+                    <input type="text" id="landing-name" name="name" placeholder="Adınız" required>
+                </div>
+                <div class="form-group">
+                    <label for="landing-email">E-posta</label>
+                    <input type="email" id="landing-email" name="email" placeholder="sizin@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="landing-message">Mesaj</label>
+                    <textarea id="landing-message" name="message" placeholder="Kısa mesaj veya soru…"></textarea>
+                </div>
+                <button type="submit" class="cta-btn">Alışveriş talebi</button>
+            </form>
+            <a href="system-notes-tr.html" class="secondary-link">Sistem Notlarını oku</a>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="../impressum.html">Künye</a>
+            <a href="../datenschutz.html">Gizlilik</a>
+        </div>
+        <p>© 2026 Nanil Pulse — Erken Aşama Sistem Projesi · <a href="system-notes-tr.html">Sistem Notları</a></p>
+        <p class="footer-disclaimer">Nanil Pulse tıbbi bir ürün değildir. Teşhis, tedavi veya terapi yoktur.</p>
+    </footer>
+</body>
+</html>

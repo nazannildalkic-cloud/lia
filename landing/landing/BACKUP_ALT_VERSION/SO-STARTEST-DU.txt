@@ -1,0 +1,15 @@
+========================================
+  NANIL PULSE – SO STARTEST DU
+========================================
+
+1. LAUFEN.bat doppelklicken
+
+2. Schwarzes Fenster offen lassen
+
+3. Browser oeffnet automatisch: http://localhost:5000
+
+4. Fertig. Nanni testen: Zu "Frag Nanni" scrollen, klicken, Mikrofon erlauben.
+
+========================================
+Das war's. Eine Datei. Ein Klick.
+========================================

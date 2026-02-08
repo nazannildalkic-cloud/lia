@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>NANIL Pulse – Obsidian & Turquoise Edition | Smart Ring für Herzgesundheit</title>
+    <meta name="description" id="meta-desc"
+        content="NANIL Pulse – Innovative neuromodulative Frequenztechnologie für Herzgesundheit. Vagusnerv-Stimulation, HRV-Tracking, KI-Assistent Nanni. Early Access ab €99.">
+    <meta name="theme-color" content="#070709">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NANIL Pulse – Obsidian & Turquoise Edition">
+    <meta property="og:description"
+        content="Innovative neuromodulative Frequenztechnologie für Herzgesundheit. Vagusnerv-Stimulation, HRV-Tracking, KI-Assistent Nanni.">
+    <meta property="og:image" content="assets/logo.jpg">
+    <meta property="og:locale" content="de_DE">
+    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+    <!-- Nanni: Keys aus nanni-config.js (lokal). -->
+    <script>window.NANNI_GROQ_KEY = window.NANNI_GROQ_KEY || '';</script>
+    <script src="nanni-config.js?v=3"></script>
+</head>
+
+<body>
+    <a href="#home" class="skip-link" id="skip-link-text">Zum Inhalt springen</a>
+    <header>
+        <div class="container header-inner">
+            <a href="#home" class="logo" aria-label="NANIL Pulse – Startseite">
+                <img src="assets/logo.jpg" alt="NANIL Pulse Logo" id="logo-img">
+                <span class="text-gradient-gold" id="logo-text"
+                    style="background: var(--gold-primary); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">NANIL
+                    Pulse</span>
+            </a>
+            <div class="nav-wrapper">
+                <nav class="main-menu" id="main-nav" role="navigation" aria-label="Hauptmenü">
+                    <ul>
+                        <li><a href="#home" class="active" id="nav-home">Home</a></li>
+                        <li><a href="#about-nanil" id="nav-about">Über NANIL</a></li>
+                        <li><a href="#how" id="nav-science">Wissenschaft</a></li>
+                        <li><a href="#products" id="nav-products">Produkte</a></li>
+                        <li><a href="#contact" id="nav-early">Early Access</a></li>
+                        <li><a href="#contact" id="nav-investors">Investoren</a></li>
+                        <li><a href="#founder" id="nav-founder">Co-Founder</a></li>
+                    </ul>
+                </nav>
+
+                <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+                    <button type="button" class="lang-btn active" aria-label="Deutsch" data-lang="de">DE</button>
+                    <button type="button" class="lang-btn" aria-label="English" data-lang="en">EN</button>
+                    <button type="button" class="lang-btn" aria-label="Türkçe" data-lang="tr">TR</button>
+                </div>
+
+                <button class="mobile-menu-btn" type="button" aria-label="Menü öffnen" aria-expanded="false"
+                    aria-controls="main-nav">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="early-access-banner" role="banner" aria-label="Early Access Hinweis">
+        <p id="banner-text">🚀 Early Access Phase 1 • Nur €99 (Regulär €249) • Launch Juli 2026</p>
+    </div>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-bg-glow"></div>
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1 class="text-gradient-cyan" id="hero-title">Dein gesündestes<br>Jahr beginnt jetzt.</h1>
+                    <p id="hero-desc"><strong>NANIL Pulse Phase 1</strong> – Der intelligente Ring, der nicht nur misst,
+                        sondern aktiv hilft. Revolutionäre neuromodulative Technologie trifft auf präzises
+                        Gesundheitstracking. Fühle den Unterschied zwischen reinem Monitoring und echter Unterstützung.
+                    </p>
+                    <p id="hero-patent" class="hero-patent">📜 Patent angemeldet • Entwickelt in Deutschland</p>
+                    <p id="hero-sub" style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 30px;">Entwickelt mit
+                        Experten für Biofeedback und Resilienz für maximale Unterstützung im Alltag.</p>
+                    <div class="hero-btns">
+                        <a href="#products" class="btn btn-primary" id="btn-hero-products">Kollektion ansehen</a>
+                        <a href="#voice" class="btn btn-secondary" id="btn-hero-voice">Frag Nanni</a>
+                    </div>
+                </div>
+                <div class="hero-visual"
+                    style="display: flex; flex-direction: column; height: auto; gap: 20px; align-items: center;">
+                    <div class="hero-video-wrap hero-media-box">
+                        <video autoplay loop muted playsinline controls aria-label="NANIL Pulse Produktvideo"
+                            style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            <source src="assets/nanni-promo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="slider-container hero-media-box">
+                        <div class="slide active">
+                            <img src="assets/nanni-collection.jpg.jpeg" alt="NANNI Ring Collection – Wear Your Waves"
+                                id="img-slide-1" class="slide-crop-even" loading="lazy">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/gold-ring.jpg" alt="Gold Edition" id="img-slide-2"
+                                class="slide-crop-top slide-crop-even" loading="lazy">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/silver-ring.jpg" alt="Silver Edition" id="img-slide-3" loading="lazy">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/patch.jpg" alt="BioPatch" id="img-slide-4" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="slider-controls" style="position: static; transform: none; margin-top: -10px;">
+                        <div class="slider-dot active" data-index="0"></div>
+                        <div class="slider-dot" data-index="1"></div>
+                        <div class="slider-dot" data-index="2"></div>
+                        <div class="slider-dot" data-index="3"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="about-nanil" class="features" style="background: rgba(0,0,0,0.08); padding: 40px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-gradient-cyan" id="about-title">Was ist NANIL Pulse?</h2>
+                    <p id="about-sub" style="max-width: 720px; margin: 0 auto;">Kurz und verständlich: Produkt, Technik
+                        und für wen es gedacht ist.</p>
+                </div>
+                <div style="max-width: 800px; margin: 30px auto 0; display: flex; flex-direction: column; gap: 24px;">
+                    <p id="about-p1" style="line-height: 1.7; opacity: 0.9;">
+                        <strong>NANIL Pulse</strong> ist ein intelligenter Gesundheitsring, der deine Vitalwerte rund um
+                        die Uhr misst (Herzfrequenz, HRV, Schlaf, Stress, Hormonhaushalt) und dich nicht nur informiert,
+                        sondern <strong>aktiv unterstützt</strong>: Durch sanfte Impulse wird der Vagusnerv stimuliert –
+                        für mehr Ruhe und Regeneration im Alltag. Zusätzlich bietet NANIL einzigartige Features wie
+                        <strong>Telefonieren über den Ring</strong> (Bone Conduction) und die <strong>KI-Assistentin
+                            Nanni</strong> für Sprache und Nachrichten.
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+                        <div class="feature-card" style="padding: 20px;">
+                            <strong id="hrv-title"
+                                style="color: var(--cyan-primary); display: block; margin-bottom: 8px;">Was ist
+                                HRV?</strong>
+                            <p id="hrv-desc" style="margin: 0; font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Die
+                                Herzfrequenzvariabilität (HRV) zeigt, wie gut dein Körper mit Belastung umgeht. Eine
+                                höhere HRV bedeutet mehr Resilienz und bessere Erholung – NANIL misst und verbessert sie
+                                durch aktive Regulation.</p>
+                        </div>
+                        <div class="feature-card" style="padding: 20px;">
+                            <strong id="vagus-title"
+                                style="color: var(--cyan-primary); display: block; margin-bottom: 8px;">Vagusnerv &
+                                tVNS</strong>
+                            <p id="vagus-desc" style="margin: 0; font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">
+                                Der Vagusnerv verbindet Gehirn und Körper und steuert Entspannung. Transkutane
+                                Vagusnerv-Stimulation (tVNS) über den Ring unterstützt dich dabei, schneller in einen
+                                ruhigen, erholsamen Zustand zu kommen – ohne dass du etwas tun musst.</p>
+                        </div>
+                    </div>
+                    <div class="vagus-image-wrap">
+                        <img src="assets/vagus-nerv.png.png" alt="Vagusnerv & tVNS – Darstellung" loading="lazy"
+                            id="img-vagus-about">
+                    </div>
+                    <p id="about-ideal"
+                        style="text-align: center; font-size: 1rem; color: var(--cyan-primary); font-weight: 600; margin-top: 10px;">
+                        Ideal für Gestresste, Sportler, Schichtarbeiter und alle, die aktive Entspannung statt nur Daten
+                        wollen.
+                    </p>
+                    <!-- Skizze & Erklärung – feste Plätze für die beiden Bilder -->
+                    <div class="skizze-erklaerung-wrap"
+                        style="display: flex; flex-direction: column; align-items: center; gap: 2.5rem; margin-top: 3rem; padding: 2rem 0;">
+                        <div style="max-width: 560px; width: 100%; text-align: center;">
+                            <h3 class="text-gradient-cyan" id="skizze-heading"
+                                style="font-size: 1.35rem; margin-bottom: 1rem;">Skizze</h3>
+                            <img src="assets/skizze.jpg.png" alt="NANIL Pulse – Skizze" loading="lazy"
+                                style="width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow-xl); display: block;">
+                        </div>
+                        <div style="max-width: 560px; width: 100%; text-align: center;">
+                            <h3 class="text-gradient-cyan" id="erklaerung-heading"
+                                style="font-size: 1.35rem; margin-bottom: 1rem;">Erklärung</h3>
+                            <img src="assets/erkärung.jpg.png" alt="NANIL Pulse – Erklärung" loading="lazy"
+                                style="width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow-xl); display: block;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-gradient-cyan" id="how-title">Wie funktioniert NANIL Pulse?</h2>
+                    <p id="how-sub">Die Wissenschaft hinter der Magie: Von der Messung zur Modulation.</p>
+                    <button id="btn-view-studies"
+                        style="background: #BD9642; color: #000; padding: 12px 24px; border-radius: 8px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; font-size: 1rem; font-weight: 700; margin-top: 15px; border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                        <i class="fas fa-book-open" style="margin-right: 8px;"></i> Studien ansehen
+                    </button>
+                </div>
+                <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-microscope"></i></div>
+                        <h3 id="step1-title">1. Vision</h3>
+                        <p id="step1-desc">Von der Vision zum Projekt: NANIL Pulse entstand aus der Idee, Stress in
+                            Echtzeit zu erkennen und aktiv zu lindern – bevor er zum Problem wird.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                        <h3 id="step2-title">2. KI-Analyse</h3>
+                        <p id="step2-desc">Unser patentierter 'Neuro-Core' erkennt Stressmuster bevor Sie sie spüren,
+                            mit höchster Präzision.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-wave-square"></i></div>
+                        <h3 id="step3-title">3. Aktive Modulation</h3>
+                        <p id="step3-desc">Über haptisches Feedback und sanfte Impulse stimuliert NANIL Pulse den
+                            Vagusnerv vollautomatisch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="symbiosis" class="features" style="background: var(--bg-dark);">
+            <div class="container">
+                <div class="hero-grid" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 60px;">
+                    <div class="hero-visual" style="height: auto; text-align: center;">
+                        <img src="assets/system-symbiosis.png" alt="Symbiosis" id="img-symbiosis" loading="lazy"
+                            style="width: 100%; height: auto; max-width: 520px; border-radius: 20px; box-shadow: var(--shadow-xl);">
+                    </div>
+                    <div class="hero-text" style="display: flex; flex-direction: column; justify-content: center;">
+                        <h2 class="text-gradient-cyan" id="symbiosis-title">System Symbiose</h2>
+                        <p id="symbiosis-sub" style="font-weight: 600; margin-bottom: 20px; font-size: 1rem;">Ein
+                            ganzheitlicher Ansatz für Körper und Geist</p>
+
+                        <h3 id="resonance-title"
+                            style="margin-bottom: 8px; font-size: 1.2rem; color: var(--cyan-primary);">
+                            Biologische Resonanz</h3>
+                        <p id="resonance-desc" style="margin-bottom: 20px; font-size: 0.92rem; line-height: 1.6;">Unser
+                            Körper ist ein elektrisches System. Stress, Angst und Umweltbelastungen bringen unsere
+                            natürlichen Frequenzen aus dem Takt. <strong>NANIL Pulse</strong> erkennt diese Dissonanzen
+                            in Echtzeit.</p>
+
+                        <h3 id="mod-title" style="margin-bottom: 8px; font-size: 1.2rem; color: var(--cyan-primary);">
+                            Aktive
+                            Modulation</h3>
+                        <p id="mod-desc" style="font-size: 0.92rem; line-height: 1.6;">Statt nur zu messen, agiert das
+                            System. Über mikroskopisch feine Impulse sendet der Chip eine harmonisierende Gegenfrequenz,
+                            die den Vagusnerv stimuliert und den Körper binnen Sekunden in einen Zustand der Kohärenz
+                            zurückführt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-gradient-cyan" id="prod-title">Unsere Kollektion</h2>
+                    <p id="prod-sub">Drei Wege zu mehr innerer Ruhe – wählen Sie Ihren Begleiter.</p>
+                </div>
+                <div class="product-row">
+                    <div class="product-card">
+                        <div class="ribbon" id="ribbon-gold">PREMIUM</div>
+                        <div class="prod-img">
+                            <img src="assets/gold-ring.jpg" alt="Gold Ring" id="img-gold" loading="lazy">
+                        </div>
+                        <div class="prod-details">
+                            <h3 id="gold-title">GoldRing Edition</h3>
+                            <p id="gold-desc">Das ultimative Statement für Gesundheit und Stil.</p>
+                            <span class="prod-price" id="gold-price">399,00 €</span>
+                            <ul class="prod-features">
+                                <li id="gold-f1"><i class="fas fa-check"></i> HRV & Herzfrequenz 24/7</li>
+                                <li id="gold-f2"><i class="fas fa-check"></i> Schlafanalyse (Tiefschlaf, REM,
+                                    Leichtschlaf, Schlafapnoe-Hinweise)</li>
+                                <li id="gold-f3"><i class="fas fa-check"></i> SpO₂ Sauerstoffsättigung</li>
+                                <li id="gold-f4"><i class="fas fa-check"></i> Körpertemperatur & Hormonhaushalt</li>
+                                <li><i class="fas fa-check"></i> Readiness Score (Tagesform)</li>
+                                <li><i class="fas fa-check"></i> <strong>Strain Score (Trainingsbelastung)</strong></li>
+                                <li><i class="fas fa-check"></i> <strong>Recovery Score (Erholung)</strong></li>
+                                <li><i class="fas fa-check"></i> Workout Auto-Detection</li>
+                                <li><i class="fas fa-check"></i> Kalorienverbrauch & VO₂ Max</li>
+                                <li><i class="fas fa-check"></i> <strong>✨ Vagusnerv-Stimulation (tVNS)</strong> <small
+                                        style="opacity: 0.7;">📜 Patent angemeldet</small></li>
+                                <li><i class="fas fa-check"></i> <strong>✨ Bone Conduction Telefonie</strong> <small
+                                        style="opacity: 0.7;">📜 Patent angemeldet</small></li>
+                                <li><i class="fas fa-check"></i> <strong>✨ Nachrichten abhören (KI)</strong></li>
+                                <li><i class="fas fa-check"></i> <strong>✨ Nanni KI-Assistent</strong></li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary" id="btn-gold">Vorbestellen</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="ribbon" id="ribbon-silver">BESTSELLER</div>
+                        <div class="prod-img">
+                            <img src="assets/silver-ring.jpg" alt="Silver Ring" id="img-silver" loading="lazy">
+                        </div>
+                        <div class="prod-details">
+                            <h3 id="silver-title">SilverRing Classic</h3>
+                            <p id="silver-desc">Zeitloses Design für den täglichen Einsatz.</p>
+                            <span class="prod-price" id="silver-price">249,00 €</span>
+                            <ul class="prod-features">
+                                <li id="silver-f1"><i class="fas fa-check"></i> HRV & Herzfrequenz</li>
+                                <li id="silver-f2"><i class="fas fa-check"></i> Schlafanalyse, Atemfrequenz &
+                                    Schlafapnoe-Hinweise</li>
+                                <li id="silver-f2b"><i class="fas fa-check"></i> Leichte Vibration bei Schlafapnoe –
+                                    sanfter Hinweis zum Positionswechsel im Schlaf</li>
+                                <li id="silver-f3"><i class="fas fa-check"></i> SpO₂ & Hormon-Tracking</li>
+                                <li id="silver-f4"><i class="fas fa-check"></i> Readiness & Recovery Score</li>
+                                <li><i class="fas fa-check"></i> Strain Score & Workout-Erkennung</li>
+                                <li><i class="fas fa-check"></i> <strong>✨ Vagusnerv-Stimulation (tVNS)</strong></li>
+                                <li><i class="fas fa-check"></i> <strong>✨ Telefonieren über den Ring</strong></li>
+                                <li><i class="fas fa-check"></i> <strong>✨ Nachrichten abhören</strong></li>
+                                <li><i class="fas fa-check"></i> <strong>✨ KI-Kommunikation (Nanni)</strong></li>
+                            </ul>
+                            <a href="#contact" class="btn btn-secondary" id="btn-silver">Vorbestellen</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="ribbon" id="ribbon-patch">NEU</div>
+                        <div class="prod-img">
+                            <img src="assets/patch.jpg" alt="BioPatch" id="img-patch" loading="lazy">
+                        </div>
+                        <div class="prod-details">
+                            <h3 id="patch-title">BioPatch Essential</h3>
+                            <p id="patch-desc">Die flexible Lösung für akute Momente.</p>
+                            <span class="prod-price" id="patch-price">139,00 €</span>
+                            <ul class="prod-features">
+                                <li id="patch-f1"><i class="fas fa-check"></i> Einweg-Patch für 72h</li>
+                                <li id="patch-f2"><i class="fas fa-check"></i> 10 Stück pro Packung</li>
+                                <li id="patch-f3"><i class="fas fa-check"></i> Sofort-Intervention</li>
+                                <li id="patch-f4"><i class="fas fa-check"></i> Hypoallergen</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-secondary" id="btn-patch">Vorbestellen</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="specs" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-gradient-cyan" id="specs-title">Nano-Technologie</h2>
+                    <p id="specs-sub">Präzision auf kleinstem Raum</p>
+                </div>
+                <div class="feature-grid specs-cards"
+                    style="grid-template-columns: 1fr; gap: 20px; max-width: 720px; margin: 0 auto;">
+                    <div class="feature-card" id="spec-micro" style="padding: 25px;">
+                        <strong id="spec-micro-tag"
+                            style="color: var(--cyan-primary); display: block; margin-bottom: 5px;">Micro-Controller:</strong>
+                        N3 Cortex-M4 Prozessor für KI-Berechnungen am Gerät (Edge Computing).
+                    </div>
+                    <div class="feature-card" id="spec-conn" style="padding: 25px;">
+                        <strong id="spec-conn-tag"
+                            style="color: var(--cyan-primary); display: block; margin-bottom: 5px;">Konnektivität:</strong>
+                        Bluetooth 5.2 Low Energy für minimale Strahlung und maximale Akkulaufzeit.
+                    </div>
+                    <div class="feature-card" id="spec-haptic" style="padding: 25px;">
+                        <strong id="spec-haptic-tag"
+                            style="color: var(--cyan-primary); display: block; margin-bottom: 5px;">Haptisches
+                            Feedback:</strong>
+                        Ein mikroskopischer Vibrationsmotor informiert sanft über Stress-Spitzen und leitet
+                        Atemübungen an.
+                    </div>
+                    <div class="feature-card" id="spec-sec" style="padding: 25px;">
+                        <strong id="spec-sec-tag"
+                            style="color: var(--cyan-primary); display: block; margin-bottom: 5px;">Verschlüsselung:</strong>
+                        AES-256 Ende-zu-Ende Verschlüsselung Ihrer Gesundheitsdaten.
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="features" style="padding: 80px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-gradient-cyan" id="health-tracker-title">Mehr als ein Health-Tracker</h2>
+                    <p id="health-tracker-sub">NANIL ist dein intelligenter Begleiter für Gesundheit UND Kommunikation
+                    </p>
+                </div>
+                <div class="three-images-row"
+                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px;">
+                    <div class="feature-card"
+                        style="padding: 24px; text-align: center; background: rgba(255,255,255,0.02); border: 1px solid rgba(201,162,39,0.25);">
+                        <img src="assets/bone-conduction.png.png" alt="Bone Conduction Technology" loading="lazy"
+                            style="width: 100%; max-width: 100%; border-radius: 10px; margin-bottom: 12px;">
+                        <h3 id="bone-title" style="color: var(--cyan-primary); margin-bottom: 15px;">Bone Conduction
+                            Telefonie</h3>
+                        <p id="bone-desc" style="opacity: 0.85; line-height: 1.7;">Revolutionäre
+                            Knochenschall-Technologie überträgt
+                            Anrufe direkt über deine Fingerknochen. Kristallklarer Sound ohne Kopfhörer. Niemand sonst
+                            kann das!
+                        </p>
+                    </div>
+                    <div class="feature-card"
+                        style="padding: 24px; text-align: center; background: rgba(255,255,255,0.02); border: 1px solid rgba(201,162,39,0.25);">
+                        <img src="assets/lifestyle_call.png.png" alt="Nachrichten & Kommunikation" loading="lazy"
+                            style="width: 100%; max-width: 100%; border-radius: 10px; margin-bottom: 12px;">
+                        <h3 id="msg-title" style="color: var(--cyan-primary); margin-bottom: 15px;">Nachrichten abhören
+                        </h3>
+                        <p id="msg-desc" style="opacity: 0.85; line-height: 1.7;">Nanni liest dir eingehende Nachrichten
+                            vor
+                            (WhatsApp, SMS, E-Mail). Bleib informiert, ohne auf den Bildschirm zu schauen.</p>
+                    </div>
+                    <div class="feature-card"
+                        style="padding: 24px; text-align: center; background: rgba(255,255,255,0.02); border: 1px solid rgba(201,162,39,0.25);">
+                        <img src="assets/nanni-app.png.png" alt="Nanni AI Assistant" loading="lazy"
+                            style="width: 100%; max-width: 100%; border-radius: 10px; margin-bottom: 12px;">
+                        <h3 id="nanni-ai-title" style="color: var(--cyan-primary); margin-bottom: 15px;">Nanni
+                            KI-Assistent</h3>
+                        <p id="nanni-ai-desc" style="opacity: 0.85; line-height: 1.7;">Sprich mit Nanni direkt über den
+                            Ring. Frag nach
+                            deinen Gesundheitswerten, stell Fragen oder lass dir Termine vorlesen.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <p id="future-tagline" style="font-size: 1.05rem; color: var(--cyan-primary); font-weight: 600;">✨
+                        Die Zukunft am Finger: Gesundheit + Kommunikation in einem Gerät</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" style="background: rgba(0,0,0,0.12); padding: 40px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-gradient-cyan" id="how-nanil-title">Wie NANIL funktioniert</h2>
+                    <p id="how-nanil-sub">Von der Messung zur aktiven Unterstützung</p>
+                </div>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 50px;">
+                    <div style="text-align: center;">
+                        <div
+                            style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(135deg, #a68b1f, #c9a227, #e2c96a); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                            1</div>
+                        <h3 id="measure-title" style="color: var(--cyan-primary); margin-bottom: 15px;">Kontinuierliche
+                            Messung</h3>
+                        <p id="measure-desc" style="opacity: 0.85; line-height: 1.6;">HRV, Herzfrequenz, SpO₂,
+                            Körpertemperatur,
+                            Atemfrequenz, Schlafphasen und Hormonhaushalt – rund um die Uhr</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div
+                            style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(135deg, #a68b1f, #c9a227, #e2c96a); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                            2</div>
+                        <h3 id="ai-title" style="color: var(--cyan-primary); margin-bottom: 15px;">KI-Analyse</h3>
+                        <p id="ai-desc" style="opacity: 0.85; line-height: 1.6;">Deine Daten werden lokal auf dem Gerät
+                            (Edge AI)
+                            analysiert und mit personalisierten Insights versehen</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div
+                            style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(135deg, #a68b1f, #c9a227, #e2c96a); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                            3</div>
+                        <h3 id="regulation-title" style="color: var(--cyan-primary); margin-bottom: 15px;">Aktive
+                            Regulation</h3>
+                        <p id="regulation-desc" style="opacity: 0.85; line-height: 1.6;">Sanfte Vibrationen leiten dich
+                            in Echtzeit zu
+                            Entspannung und Balance – ohne dass du etwas tun musst</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison" class="features" style="background: rgba(0,0,0,0.12); padding: 40px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-gradient-cyan" id="comp-title">NANIL vs. Konkurrenz <span id="comp-phase"
+                            style="font-size: 0.6em; opacity: 0.7;">(Phase 1)</span></h2>
+                </div>
+                <div class="table-wrap" role="region" aria-label="Vergleichstabelle NANIL mit Konkurrenz">
+                    <table class="comparison-table">
+                        <caption class="sr-only">Vergleich NANIL Pulse mit Premium Smart Rings und Budget-Ringen
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" id="tbl-th-feature">Feature</th>
+                                <th scope="col" class="th-nanil" id="tbl-th-nanil">NANIL Pulse</th>
+                                <th scope="col" id="tbl-th-premium">Premium Smart Rings</th>
+                                <th scope="col" id="tbl-th-budget">Budget-Ringe</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="tbl-r1-label"
+                                    style="padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05);">Preis</td>
+                                <td
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--cyan-primary); font-weight: bold;">
+                                    €99</td>
+                                <td
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    €349+</td>
+                                <td
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    €75</td>
+                            </tr>
+                            <tr>
+                                <td id="tbl-r2-label"
+                                    style="padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05);">Monatliches
+                                    Abo</td>
+                                <td id="tbl-r2-nanil"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); color: #0f0; font-weight: bold;">
+                                    NEIN ✓</td>
+                                <td id="tbl-r2-premium"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    €5.99/Monat</td>
+                                <td id="tbl-r2-budget"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    Teilweise</td>
+                            </tr>
+                            <tr>
+                                <td id="tbl-r3-label"
+                                    style="padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05);">HRV +
+                                    StressTracking</td>
+                                <td id="tbl-r3-nanil"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    ✓</td>
+                                <td id="tbl-r3-premium"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    ✓</td>
+                                <td id="tbl-r3-budget"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    Begrenzt</td>
+                            </tr>
+                            <tr>
+                                <td id="tbl-r4-label"
+                                    style="padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05);">Aktive
+                                    Regulation (Vibrationen)</td>
+                                <td id="tbl-r4-nanil"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--cyan-primary); font-weight: bold;">
+                                    ✓ EINZIGARTIG</td>
+                                <td id="tbl-r4-premium"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    ✗</td>
+                                <td id="tbl-r4-budget"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    ✗</td>
+                            </tr>
+                            <tr>
+                                <td id="tbl-r5-label"
+                                    style="padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05);">BioPatch
+                                    Closed-Loop</td>
+                                <td id="tbl-r5-nanil"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--cyan-primary); font-weight: bold;">
+                                    ✓ EXKLUSIV</td>
+                                <td id="tbl-r5-premium"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    ✗</td>
+                                <td id="tbl-r5-budget"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    ✗</td>
+                            </tr>
+                            <tr>
+                                <td id="tbl-r6-label"
+                                    style="padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05);">Bone
+                                    Conduction Telefonie</td>
+                                <td id="tbl-r6-nanil"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--cyan-primary); font-weight: bold;">
+                                    ✓ WELTWEIT EINZIGARTIG</td>
+                                <td id="tbl-r6-premium"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    ✗</td>
+                                <td id="tbl-r6-budget"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    ✗</td>
+                            </tr>
+                            <tr>
+                                <td id="tbl-r7-label"
+                                    style="padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    Vagusnerv-Stimulation (tVNS)</td>
+                                <td id="tbl-r7-nanil"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--cyan-primary); font-weight: bold;">
+                                    ✓ WELTWEIT EINZIGARTIG</td>
+                                <td id="tbl-r7-premium"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    ✗</td>
+                                <td id="tbl-r7-budget"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    ✗</td>
+                            </tr>
+                            <tr>
+                                <td id="tbl-r8-label"
+                                    style="padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05);">Akkulaufzeit
+                                </td>
+                                <td id="tbl-r8-nanil"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    5-7 Tage</td>
+                                <td id="tbl-r8-premium"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    5-7 Tage</td>
+                                <td id="tbl-r8-budget"
+                                    style="padding: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    3-5 Tage</td>
+                            </tr>
+                            <tr>
+                                <td id="tbl-r9-label" style="padding: 15px;">Wasserdicht</td>
+                                <td id="tbl-r9-nanil" style="padding: 15px; text-align: center;">IP68</td>
+                                <td id="tbl-r9-premium" style="padding: 15px; text-align: center;">100m</td>
+                                <td id="tbl-r9-budget" style="padding: 15px; text-align: center;">IP67</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <p id="comp-tagline" style="font-size: 1.1rem; color: var(--cyan-primary); font-weight: 600;">
+                        Premium-Qualität zum fairen Preis. Ohne Abo. Für immer.</p>
+                    <p id="comp-merksatz"
+                        style="font-size: 0.98rem; opacity: 0.85; margin-top: 12px; max-width: 640px; margin-left: auto; margin-right: auto;">
+                        NANIL ist der einzige Ring mit aktiver Regulation (tVNS) und Telefonie am Finger – ohne
+                        monatliche Gebühr.</p>
+                    <p id="comp-phase-note" style="font-size: 0.95rem; opacity: 0.7; margin-top: 10px;">Phase 1 Launch
+                        Juli 2026 • Weitere Features & Geräte folgen</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="features" style="padding: 40px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-gradient-cyan" id="faq-title">Häufig gestellte Fragen</h2>
+                    <p id="faq-sub">Wir beantworten Ihre wichtigsten Fragen</p>
+                </div>
+                <div style="max-width: 800px; margin: 50px auto 0; display: flex; flex-direction: column; gap: 20px;">
+                    <details class="feature-card"
+                        style="padding: 25px; cursor: pointer; background: rgba(255,255,255,0.02); border-radius: 12px;">
+                        <summary
+                            style="font-weight: 600; font-size: 1.05rem; color: var(--cyan-primary); cursor: pointer;">
+                            Wie unterscheidet sich NANIL von Oura Ring?</summary>
+                        <p style="margin-top: 15px; line-height: 1.7; opacity: 0.85;">NANIL bietet nicht nur passives
+                            Tracking wie Oura, sondern aktive Regulation durch intelligente Vibrationen und das BioPatch
+                            Closed-Loop-System. Zudem: Kein monatliches Abo (Oura: €5.99/Monat).</p>
+                    </details>
+                    <details class="feature-card"
+                        style="padding: 25px; cursor: pointer; background: rgba(255,255,255,0.02); border-radius: 12px;">
+                        <summary id="faq2-q"
+                            style="font-weight: 600; font-size: 1.05rem; color: var(--cyan-primary); cursor: pointer;">
+                            Ist NANIL ein Medizinprodukt?</summary>
+                        <p id="faq2-a" style="margin-top: 15px; line-height: 1.7; opacity: 0.85;">Nein. NANIL Pulse ist
+                            ein
+                            Wellness- und Lifestyle-Produkt zur Unterstützung von Entspannung und Stressmanagement. Es
+                            ersetzt keine professionelle Gesundheitsberatung.</p>
+                    </details>
+                    <details class="feature-card"
+                        style="padding: 25px; cursor: pointer; background: rgba(255,255,255,0.02); border-radius: 12px;">
+                        <summary id="faq3-q"
+                            style="font-weight: 600; font-size: 1.05rem; color: var(--cyan-primary); cursor: pointer;">
+                            Wann wird NANIL verfügbar sein?</summary>
+                        <p id="faq3-a" style="margin-top: 15px; line-height: 1.7; opacity: 0.85;">Der offizielle Launch
+                            ist für
+                            <strong>Juli 2026</strong> geplant. Early Access Mitglieder erhalten bevorzugten Zugang und
+                            exklusive Updates.
+                        </p>
+                    </details>
+                    <details class="feature-card"
+                        style="padding: 25px; cursor: pointer; background: rgba(255,255,255,0.02); border-radius: 12px;">
+                        <summary id="faq4-q"
+                            style="font-weight: 600; font-size: 1.05rem; color: var(--cyan-primary); cursor: pointer;">
+                            Gibt es ein Rückgaberecht?</summary>
+                        <p id="faq4-a" style="margin-top: 15px; line-height: 1.7; opacity: 0.85;">Ja! 30 Tage
+                            Geld-zurück-Garantie
+                            ab Lieferung, ohne wenn und aber.</p>
+                    </details>
+                    <details class="feature-card"
+                        style="padding: 25px; cursor: pointer; background: rgba(255,255,255,0.02); border-radius: 12px;">
+                        <summary id="faq5-q"
+                            style="font-weight: 600; font-size: 1.05rem; color: var(--cyan-primary); cursor: pointer;">
+                            Wie funktioniert die App?</summary>
+                        <p id="faq5-a" style="margin-top: 15px; line-height: 1.7; opacity: 0.85;">Die NANIL App (iOS &
+                            Android)
+                            zeigt Ihre Gesundheitsdaten in Echtzeit, gibt personalisierte Empfehlungen und benötigt
+                            <strong>kein Abo</strong>. Alle Premium-Features sind inkludiert.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="voice" class="voice-agent"
+            style="padding-bottom: 60px; background: linear-gradient(135deg, #222235, #2d2d44) !important;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-gradient-cyan" id="voice-title">KI-Sprachbegleiterin</h2>
+                    <p id="voice-sub">Nanni ist Ihre Begleiterin im NANIL-System.</p>
+                </div>
+                <div class="voice-interface"
+                    style="background: transparent; border: none; box-shadow: none; padding: 0;">
+                    <p id="voice-desc" style="margin-bottom: 30px;">Nutzen Sie die Kraft der Sprache. Nanni erklärt
+                        Ihnen alles über unsere Technologie und beantwortet Ihre Fragen – auf Deutsch, Englisch oder
+                        Türkisch.</p>
+                    <div class="orb" id="vapi-orb"
+                        style="width: 100px; height: 100px; margin: 24px auto; cursor: pointer; display: flex !important; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                        <i class="fas fa-microphone" style="font-size: 32px; color: #fff;"></i>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="start-vapi-btn"
+                        aria-label="Nanni Sprachassistent starten"
+                        style="padding: 12px 30px; border: none; border-radius: 999px; cursor: pointer; font-size: 1rem; font-weight: 600;">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i> Nanni starten
+                    </button>
+                    <p id="nanni-status" style="margin-top: 15px; font-size: 0.85rem; color: #888; font-style: italic;">
+                        Geben
+                        Sie Nanni ein Zeichen zum Sprechen.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="founder" class="features" style="background: rgba(0,0,0,0.06); padding: 50px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-gradient-cyan" id="founder-title">Die Gründerin</h2>
+                    <p id="founder-sub" style="max-width: 640px; margin: 0 auto;">Hinter NANIL Pulse steht eine Person
+                        mit Vision und Expertise.</p>
+                </div>
+                <div style="max-width: 720px; margin: 28px auto 0; text-align: center;">
+                    <p id="founder-name"
+                        style="font-size: 1.25rem; font-weight: 700; color: var(--gold-primary); margin-bottom: 12px;">
+                        Nazan Nil Dalkic (Nazannil)</p>
+                    <p id="founder-desc" style="line-height: 1.75; opacity: 0.9; margin-bottom: 20px;">35+ Jahre
+                        Erfahrung in Wellness und Stress-Management. NLP Master, Reiki-Meisterin. Mehrsprachig: Deutsch,
+                        Türkisch, Englisch. Ihre Mission: Technologie mit therapeutischer Kompetenz verbinden – so ist
+                        NANIL Pulse entstanden.</p>
+                    <a href="co-founder.html" class="btn btn-secondary" id="btn-founder">Gründerin & Vision</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-gradient-cyan" id="contact-title">Kontakt aufnehmen</h2>
+                    <p id="contact-sub">Wir freuen uns auf Ihre Anfrage</p>
+                    <p id="trust-line" style="font-size: 0.9rem; opacity: 0.75; margin-top: 8px;">30 Tage Geld-zurück ·
+                        Sichere Zahlung · Entwickelt in Deutschland</p>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/xreezyov" method="POST">
+                    <input type="hidden" name="_subject" value="NANIL Pulse: Neue Kontaktanfrage">
+                    <div class="form-group">
+                        <label id="label-name" for="input-name">Ihr Name</label>
+                        <input type="text" id="input-name" name="name" placeholder="Nazan Nil Dalkic" required
+                            autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label id="label-email" for="input-email">Ihre E-Mail</label>
+                        <input type="email" id="input-email" name="email" placeholder="ihre@email.de" required
+                            autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label id="label-interest" for="input-interest">Interesse an</label>
+                        <select id="input-interest" name="interest">
+                            <option value="General">Allgemeine Anfrage</option>
+                            <option value="Preorder">Produkte vorbestellen</option>
+                            <option value="Investor">Investor / VC</option>
+                            <option value="Co-Founder">Mitgründer Bewerbung</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label id="label-msg" for="form-msg-placeholder">Ihre Nachricht</label>
+                        <textarea name="message" id="form-msg-placeholder" rows="5"
+                            placeholder="Wie können wir Ihnen helfen?" required></textarea>
+                    </div>
+                    <div class="form-group form-group-checkbox">
+                        <label for="privacy" class="checkbox-label">
+                            <input type="checkbox" id="privacy" name="privacy" required aria-required="true">
+                            <span id="legal-text">Ich akzeptiere die <a href="datenschutz.html"
+                                    id="link-privacy">Datenschutzerklärung</a> und <a href="agb.html"
+                                    id="link-agb">AGB</a>.</span>
+                        </label>
+                    </div>
+                    <div class="honeypot-wrap" aria-hidden="true">
+                        <input type="text" name="website_url_honeypot" tabindex="-1" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label id="label-captcha" for="captcha-input">Sicherheitsfrage: Was ist 3 + 4?</label>
+                        <input type="text" id="captcha-input" name="captcha" placeholder="7" required pattern="7"
+                            title="Bitte lösen Sie die Rechenaufgabe (3 + 4 = 7)" inputmode="numeric"
+                            autocomplete="off">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="btn-send-msg"
+                        style="width: 100%; margin-top: 20px;">Nachricht senden</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <span class="text-gradient-gold">NANIL Pulse</span>
+            </div>
+
+            <nav id="footer-nav" aria-label="Rechtliches und Datenschutz" style="margin-bottom: 30px;">
+                <a href="co-founder.html" id="link-cofounder-footer" style="margin: 0 10px;">Co-Founder</a>
+                <a href="impressum.html" id="link-impressum" style="margin: 0 10px;">Impressum</a>
+                <a href="datenschutz.html" id="link-privacy-footer" style="margin: 0 10px;">Datenschutz</a>
+                <a href="agb.html" id="link-agb-footer" style="margin: 0 10px;">AGB</a>
+            </nav>
+            <p id="footer-copy">&copy; 2026 NANIL Pulse - Nazan Nil Dalkic. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <!-- Nanni Assistant Script (Vapi) -->
+    <script type="module">
+        import Vapi from "https://esm.sh/@vapi-ai/web";
+
+        const publicKey = '946075e5-8ecc-45cb-9daf-7a22a29983e7';
+        const assistantId = '019159c3-7186-4c40-9a80-d62d04251216';
+
+        const vapi = new Vapi(publicKey);
+        let isActive = false;
+
+        const btn = document.getElementById('start-vapi-btn');
+        const orb = document.getElementById('vapi-orb');
+        const statusText = document.getElementById('nanni-status');
+
+        console.log("Nanni System initialized with Assistant ID: " + assistantId);
+
+        async function toggleCall() {
+            if (isActive) {
+                vapi.stop();
+                return;
+            }
+
+            try {
+                if (statusText) statusText.innerText = "Frage Mikrofon an...";
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                stream.getTracks().forEach(t => t.stop());
+
+                if (statusText) statusText.innerText = "Verbindung wird aufgebaut...";
+                vapi.start(assistantId);
+            } catch (err) {
+                if (statusText) statusText.innerText = "Fehler: Mikrofonzugriff verweigert.";
+                console.error("Vapi Error:", err);
+            }
+        }
+
+        vapi.on('call-start', () => {
+            isActive = true;
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-stop"></i> ' + (window.getTranslation ? window.getTranslation('btn_stop_voice') : 'Nanni stoppen');
+                btn.style.background = "#ff5e62";
+            }
+            if (orb) {
+                orb.classList.add('active', 'speaking');
+                orb.style.boxShadow = "0 0 50px #00bcd4";
+            }
+            if (statusText) statusText.innerText = "Nanni hört zu...";
+        });
+
+        vapi.on('call-end', () => {
+            isActive = false;
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-microphone"></i> ' + (window.getTranslation ? window.getTranslation('btn_start_voice') : 'Nanni starten');
+                btn.style.background = "";
+            }
+            if (orb) {
+                orb.classList.remove('active', 'speaking');
+                orb.style.boxShadow = "";
+            }
+            if (statusText) statusText.innerText = "Bereit für das nächste Gespräch.";
+        });
+
+        vapi.on('error', (e) => {
+            console.error("Vapi Runtime Error:", e);
+            if (statusText) statusText.innerText = "Verbindung unterbrochen. Bitte neu starten.";
+            isActive = false;
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-microphone"></i> ' + (window.getTranslation ? window.getTranslation('btn_start_voice') : 'Nanni starten');
+                btn.style.background = "";
+            }
+            if (orb) orb.classList.remove('active', 'speaking');
+        });
+
+        if (btn) btn.onclick = toggleCall;
+        if (orb) orb.onclick = toggleCall;
+    </script>
+
+
+    <!-- Studies Modal -->
+    <div id="studies-modal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 3000; align-items: center; justify-content: center; backdrop-filter: blur(5px);">
+        <div
+            style="background: #fff; padding: 2.5rem; border-radius: 16px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; border: 1px solid #ddd; text-align: left; position: relative; box-shadow: 0 0 30px rgba(0,0,0,0.2);">
+            <button id="close-studies-modal"
+                style="position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; color: #333; font-size: 1.8rem; cursor: pointer; line-height: 1;">&times;</button>
+            <h3
+                style="color: #333; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                Wissenschaftliche Quellen</h3>
+            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
+                <li><a href="https://www.colivevoice.org/" target="_blank"
+                        style="color: #007bff; text-decoration: none;"><strong>Nanil Stimmenstudie</strong> – Vocal
+                        Biomarkers & Gesundheit (Colive Voice) <i class="fas fa-external-link-alt"></i></a></li>
+                <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11658629/" target="_blank"
+                        style="color: #007bff; text-decoration: none;">A voice-based algorithm can predict type 2
+                        diabetes status <i class="fas fa-external-link-alt"></i></a></li>
+                <li><a href="https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000679"
+                        target="_blank" style="color: #007bff; text-decoration: none;">PLOS Digital Health – AI for
+                        diabetes screening <i class="fas fa-external-link-alt"></i></a></li>
+                <li><a href="https://www.lih.lu/en/article/say-hello-to-non-invasive-screening-new-ai-tool-identifies-diabetes-using-voice-analysis/"
+                        target="_blank" style="color: #007bff; text-decoration: none;">Luxembourg Institute of Health –
+                        Colive Voice <i class="fas fa-external-link-alt"></i></a></li>
+                <li><a href="https://www.jmir.org/2024/1/e58572/" target="_blank"
+                        style="color: #007bff; text-decoration: none;">JMIR – Speech analysis for mental state <i
+                            class="fas fa-external-link-alt"></i></a></li>
+                <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10415910/" target="_blank"
+                        style="color: #007bff; text-decoration: none;">Systematic Review – Vocal Biomarkers <i
+                            class="fas fa-external-link-alt"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        (function initStudiesModal() {
+            const btnSt = document.getElementById('btn-view-studies');
+            const modalSt = document.getElementById('studies-modal');
+            const closeSt = document.getElementById('close-studies-modal');
+            if (btnSt && modalSt && closeSt) {
+                btnSt.onclick = (e) => { e.preventDefault(); modalSt.style.display = 'flex'; };
+                closeSt.onclick = () => modalSt.style.display = 'none';
+                modalSt.onclick = (e) => { if (e.target === modalSt) modalSt.style.display = 'none'; };
+            }
+        })();
+    </script>
+</body>
+
+</html>

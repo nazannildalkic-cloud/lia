@@ -1,0 +1,20 @@
+# Nanni: Für GitHub Pages muss nanni-config.js MIT im Repo sein (sonst Groq-Key fehlt)
+
+# Umgebungsvariablen / lokale Konfiguration
+.env
+.env.local
+*.local
+
+# Logs
+*.log
+gateway_*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Optional: Node (falls später genutzt)
+node_modules/

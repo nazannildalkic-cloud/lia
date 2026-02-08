@@ -1,0 +1,16 @@
+========================================
+  NANNI – Auf ALLE Fragen antworten
+========================================
+
+1. Gehe zu https://console.groq.com
+2. Kostenlos registrieren, API Key erstellen
+3. nanni-config.example.js kopieren zu nanni-config.js
+4. In nanni-config.js deinen Key eintragen:
+   window.NANNI_GROQ_KEY = 'gsk_dein_key_hier';
+5. Speichern, Seite neu laden
+
+WICHTIG: nanni-config.js steht in .gitignore –
+wird NICHT ins Repository hochgeladen.
+Dein Key bleibt sicher auf deinem Rechner.
+
+========================================

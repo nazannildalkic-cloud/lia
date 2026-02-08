@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANIL Pulse - TEST VERSION</title>
+    <style>
+        body {
+            background: #050505;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .test-box {
+            border: 2px solid #00bcd4;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            background: #00bcd4;
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        #status {
+            margin-top: 20px;
+            color: #888;
+        }
+
+        .error {
+            color: #ff5e62 !important;
+        }
+
+        .success {
+            color: #4caf50 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test-box">
+        <h1>Nanni Test-Modus</h1>
+        <p>Um zu prüfen, warum das Mikrofon nicht geht, klicke auf diesen Button:</p>
+        <button id="test-btn" class="btn">Mikrofon Testen</button>
+        <div id="status">Warte auf Klick...</div>
+    </div>
+
+    <!-- Vapi Web SDK -->
+    <script type="module">
+        import Vapi from "https://esm.sh/@vapi-ai/web";
+
+        const apiKey = '946075e5-8ecc-45cb-9daf-7a22a29983e7';
+        const assistantId = '019159c3-7186-4c40-9a80-d62d04251216';
+
+        const vapi = new Vapi(apiKey);
+        const btn = document.getElementById('test-btn');
+        const status = document.getElementById('status');
+
+        btn.onclick = async () => {
+            status.className = "";
+            status.innerText = "Prüfe Mikrofon-Hardware...";
+
+            try {
+                // Schritt 1: Browser-Zulassung prüfen
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                status.innerText = "Hardware OK: Mikrofon wurde vom Browser zugelassen.";
+                status.classList.add('success');
+                stream.getTracks().forEach(t => t.stop());
+
+                // Schritt 2: Vapi Verbindung versuchen
+                status.innerText += "\nVerbinde mit Nanni (API-Check)...";
+                vapi.start(assistantId);
+            } catch (err) {
+                status.innerText = "FEHLER: " + err.message;
+                status.classList.add('error');
+                if (err.name === 'NotAllowedError') {
+                    status.innerText += "\nTIPP: Dein Browser blockiert das Mikrofon. Klicke links neben der URL auf das Schloss-Symbol und erlaube den Zugriff.";
+                }
+            }
+        };
+
+        vapi.on('call-start', () => {
+            status.innerText = "ERFOLG: Verbindung zu Nanni steht! Sie hört dich jetzt.";
+            status.className = "success";
+            btn.innerText = "Stoppen";
+            btn.style.background = "#ff5e62";
+            btn.onclick = () => vapi.stop();
+        });
+
+        vapi.on('call-end', () => {
+            status.innerText = "Verbindung beendet.";
+            btn.innerText = "Erneut Testen";
+            btn.style.background = "#00bcd4";
+            btn.onclick = () => location.reload();
+        });
+
+        vapi.on('error', (e) => {
+            status.innerText = "API FEHLER: " + (e.message || "Unbekannter Fehler");
+            status.className = "error";
+        });
+    </script>
+</body>
+
+</html>

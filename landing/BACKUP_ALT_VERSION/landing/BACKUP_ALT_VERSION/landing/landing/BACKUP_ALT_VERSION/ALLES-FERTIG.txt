@@ -1,0 +1,25 @@
+========================================
+  NANIL PULSE – ALLES BEREIT
+========================================
+
+Zum Starten (ein Klick):
+
+  → START.bat doppelklicken
+
+  Das Programm prueft automatisch:
+  - Wenn Node/npx vorhanden: Server auf Port 3000, Browser oeffnet localhost:3000
+  - Wenn nur Python vorhanden: Server auf Port 8000, Browser oeffnet localhost:8000
+  - Wenn nichts gefunden: Hinweis zur Installation
+
+  Das schwarze Fenster NICHT schliessen – darin laeuft der Server.
+
+Nanni (Sprach-Assistent):
+  - Funktioniert unter localhost (3000 oder 8000) und unter https
+  - Nach Start: Zu „Frag Nanni“ / Voice-Bereich scrollen, auf „Nanni starten“ klicken, Mikrofon erlauben
+
+Bei Problemen:
+  - DIAGNOSE.bat starten (zeigt, ob Node/Python gefunden werden)
+  - SEITE-NICHT-OEFFNET.md lesen
+  - NUR-SERVER-STARTEN.bat: nur Server, Browser manuell oeffnen
+
+========================================

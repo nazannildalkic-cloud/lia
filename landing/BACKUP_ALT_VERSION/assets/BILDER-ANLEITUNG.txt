@@ -1,0 +1,13 @@
+Auftrag-Bilder für die Hero-Sektion (über dem Slider):
+
+1. auftrag.jpg
+   → Wird als ÜBERSCHRIFT über dem Slider angezeigt.
+   → Einfach diese Datei hier in den Ordner "assets" legen.
+   → Wenn die Datei fehlt, erscheint stattdessen der Text "Kollektion im Überblick".
+
+2. auftrag-extra.jpg
+   → Zweites Bild, wird direkt unter der Überschrift angezeigt (wenn die Datei vorhanden ist).
+   → Einfach diese Datei hier in den Ordner "assets" legen.
+   → Wenn die Datei fehlt, wird nichts angezeigt.
+
+Nach dem Ablegen die Seite neu laden.

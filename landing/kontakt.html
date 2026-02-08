@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt — Nanil Pulse</title>
+    <link rel="icon" type="image/jpeg" href="../assets/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="landing.css?v=4">
+    <style>
+        /* Spezifische Styles für die Kontaktseite, basierend auf landing.css */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+            padding-top: 140px;
+            padding-bottom: 80px;
+            max-width: 600px;
+            /* Schmaler für Formular */
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .contact-note {
+            font-size: 16px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* Formular Styles - übernommen und angepasst von landing.css */
+        .contact-form {
+            background: var(--card);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s, background 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--turquoise);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            border-radius: 999px;
+            border: none;
+            background: var(--accent);
+            /* Gold */
+            color: var(--bg);
+            /* Dunkler Text auf Gold */
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: inherit;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(201, 162, 39, 0.25);
+        }
+
+        .email-direct {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .email-direct a {
+            color: var(--turquoise);
+            text-decoration: none;
+        }
+
+        .email-direct a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index1.html" class="logo-link" aria-label="Zurück zur Startseite">
+            <img src="../assets/logo.jpg" alt="Nanil Pulse">
+        </a>
+        <div class="header-nav">
+            <a href="../index.html" class="main-site-link"
+                style="margin-right: 10px; font-weight: bold; border: 1px solid currentColor; padding: 5px 10px; border-radius: 4px;">ZUR
+                HAUPT-VERSION</a>
+            <div class="lang-switcher">
+                <a href="kontakt.html" class="active">DE</a>
+                <a href="kontakt-en.html">EN</a>
+                <a href="kontakt-tr.html">TR</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="contact-header">
+            <h1 class="contact-title">Kontakt aufnehmen</h1>
+            <p class="contact-note">Visionäre Partnerschaften beginnen mit einem Gespräch. <br>Wir melden uns
+                schnellstmöglich bei Ihnen.</p>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/xreezyov" method="POST">
+            <!-- Hidden Fields für Formspree -->
+            <input type="hidden" name="_subject" value="Nanil Pulse Vorpage: Neue Kontaktanfrage">
+            <input type="hidden" name="_next" value="../danke.html">
+
+            <div class="form-group">
+                <label for="name">Ihr Name</label>
+                <input type="text" id="name" name="name" placeholder="Vorname Nachname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Ihre E-Mail-Adresse</label>
+                <input type="email" id="email" name="email" placeholder="name@beispiel.de" required>
+            </div>
+
+            <div class="form-group">
+                <label for="interest">Interesse an</label>
+                <select id="interest" name="interest">
+                    <option value="General">Allgemeine Anfrage</option>
+                    <option value="Co-Founder">Co-Founder Rolle</option>
+                    <option value="Investor">Investition / Seed</option>
+                    <option value="Partner">Partnerschaft</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" placeholder="Wie können wir gemeinsam die Zukunft gestalten?"
+                    required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Nachricht senden</button>
+        </form>
+
+        <div class="email-direct">
+            Oder direkt per E-Mail: <a href="mailto:nazandalkic@gmail.com">nazandalkic@gmail.com</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="agb.html">AGB</a>
+        </div>
+        <p class="footer-disclaimer">Nanil Pulse ist kein medizinisches Produkt.</p>
+    </footer>
+</body>
+
+</html>

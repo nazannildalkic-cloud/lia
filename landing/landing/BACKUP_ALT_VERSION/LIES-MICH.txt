@@ -1,0 +1,3 @@
+START-JETZT.bat doppelklicken.
+Fenster offen lassen.
+Browser oeffnet automatisch.

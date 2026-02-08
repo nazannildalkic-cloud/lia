@@ -1,0 +1,21 @@
+========================================
+  NANIL PULSE – MORGEN STARTEN
+========================================
+
+1. Doppelklick auf:  EINFACH-START.bat
+   (oder START.bat)
+
+2. Schwarzes Fenster NICHT schliessen
+   (darin laeuft der Server)
+
+3. Browser oeffnet sich automatisch.
+   Falls nicht: im Browser eingeben:
+   http://localhost:8080   (Python)
+   oder  http://localhost:3000   (Node)
+
+4. Nanni funktioniert unter localhost – einfach testen.
+
+========================================
+Bei Problemen: DIAGNOSE.bat starten
+oder SEITE-NICHT-OEFFNET.md lesen.
+========================================

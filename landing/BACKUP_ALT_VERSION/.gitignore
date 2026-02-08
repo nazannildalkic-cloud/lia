@@ -1,0 +1,21 @@
+# Nanni: API-Key nicht hochladen (Sicherheit)
+nanni-config.js
+
+# Umgebungsvariablen / lokale Konfiguration
+.env
+.env.local
+*.local
+
+# Logs
+*.log
+gateway_*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Optional: Node (falls später genutzt)
+node_modules/

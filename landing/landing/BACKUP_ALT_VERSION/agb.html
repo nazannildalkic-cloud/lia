@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANIL Pulse - Allgemeine Geschäftsbedingungen (AGB)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.jpg" alt="Logo">
+                <span class="text-gradient-gold">NANIL Pulse</span>
+            </a>
+            <nav>
+                <div class="lang-switcher" style="display: flex; gap: 10px; margin-right: 20px;">
+                    <button onclick="window.setLanguage('de')"
+                        style="background:none; border:none; color:inherit; cursor:pointer;">DE</button>
+                    <button onclick="window.setLanguage('en')"
+                        style="background:none; border:none; color:inherit; cursor:pointer;">EN</button>
+                    <button onclick="window.setLanguage('tr')"
+                        style="background:none; border:none; color:inherit; cursor:pointer;">TR</button>
+                </div>
+                <ul>
+                    <li><a href="index.html" id="nav-home">Zurück zur Startseite</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main style="flex: 1; padding: 120px 20px 60px;">
+        <div class="container" style="max-width: 800px; color: #ccc;">
+            <h1 class="text-gradient-gold" style="margin-bottom: 30px;">Allgemeine Geschäftsbedingungen</h1>
+
+            <section style="margin-bottom: 30px;">
+                <h2 style="color: white; margin-bottom: 10px;">§ 1 Geltungsbereich</h2>
+                <p>
+                    (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Geschäftsbeziehungen zwischen NANIL
+                    Pulse (nachfolgend: Anbieter) und seinen Kunden in der zum Zeitpunkt des Vertragsschlusses gültigen
+                    Fassung.
+                </p>
+                <p>
+                    (2) Abweichende Bedingungen des Kunden werden nicht anerkannt, es sei denn, der Anbieter stimmt
+                    ihrer Geltung ausdrücklich schriftlich zu.
+                </p>
+            </section>
+
+            <section style="margin-bottom: 30px;">
+                <h2 style="color: white; margin-bottom: 10px;">§ 2 Vertragsschluss</h2>
+                <p>
+                    (1) Die Präsentation der Waren im Online-Shop stellt kein rechtlich bindendes Angebot, sondern eine
+                    Aufforderung zur Bestellung dar.
+                </p>
+                <p>
+                    (2) Durch Anklicken des Buttons "Kaufen" / "Vorbestellen" geben Sie eine verbindliche Bestellung der
+                    im Warenkorb enthaltenen Waren ab.
+                </p>
+            </section>
+
+            <section style="margin-bottom: 30px;">
+                <h2 style="color: white; margin-bottom: 10px;">§ 3 Widerrufsrecht</h2>
+                <p>
+                    Verbrauchern steht grundsätzlich ein Widerrufsrecht zu. Nähere Informationen zum Widerrufsrecht
+                    ergeben sich aus der Widerrufsbelehrung des Anbieters.
+                </p>
+            </section>
+
+            <section style="margin-bottom: 30px;">
+                <h2 style="color: white; margin-bottom: 10px;">§ 4 Haftung</h2>
+                <p>
+                    (1) Ansprüche des Kunden auf Schadensersatz sind ausgeschlossen. Hiervon ausgenommen sind
+                    Schadensersatzansprüche des Kunden aus der Verletzung des Lebens, des Körpers, der Gesundheit oder
+                    aus der Verletzung wesentlicher Vertragspflichten (Kardinalpflichten).
+                </p>
+                <p>
+                    (2) NANIL Pulse ist ein Wellness-Produkt und kein Medizinprodukt im Sinne der MPBetreibV, sofern
+                    nicht ausdrücklich anders gekennzeichnet.
+                </p>
+            </section>
+
+            <section>
+                <h2 style="color: white; margin-bottom: 10px;">§ 5 Schlussbestimmungen</h2>
+                <p>
+                    (1) Auf Verträge zwischen dem Anbieter und den Kunden findet das Recht der Bundesrepublik
+                    Deutschland unter Ausschluss des UN-Kaufrechts Anwendung.
+                </p>
+                <p>
+                    (2) Sofern es sich beim Kunden um einen Kaufmann, eine juristische Person des öffentlichen Rechts
+                    oder um ein öffentlich-rechtliches Sondervermögen handelt, ist Gerichtsstand für alle Streitigkeiten
+                    aus Vertragsverhältnissen zwischen dem Kunden und dem Anbieter der Sitz des Anbieters (Hamburg).
+                </p>
+            </section>
+
+            <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.8rem;">
+                Stand: Januar 2026
+            </div>
+        </div>
+        <section id="voice" class="voice-agent"
+            style="margin-top: 50px; padding: 40px; background: rgba(0,0,0,0.1); border-radius: 20px; text-align: center; border: 1px solid var(--border);">
+            <h2 id="voice-title">KI-Sprachbegleiterin</h2>
+            <p id="voice-sub">Nanni ist Ihre Begleiterin.</p>
+            <div class="orb" id="vapi-orb"
+                style="width: 80px; height: 80px; margin: 20px auto; background: var(--turquoise); border-radius: 50%; cursor: pointer;">
+            </div>
+            <button type="button" id="start-vapi-btn" class="btn btn-primary"
+                style="background: var(--turquoise); color: white; padding: 10px 20px; border: none; border-radius: 999px; cursor: pointer;">Nanni
+                starten</button>
+            <p id="nanni-status" style="margin-top: 15px; font-size: 0.8rem; color: var(--muted);">Bereit.</p>
+        </section>
+    </main>
+    <!-- Nanni Assistant Script (Vapi) -->
+    <script type="module">
+        import Vapi from "https://esm.sh/@vapi-ai/web";
+
+        const publicKey = '946075e5-8ecc-45cb-9daf-7a22a29983e7';
+        const assistantId = '019159c3-7186-4c40-9a80-d62d04251216';
+
+        const vapi = new Vapi(publicKey);
+        let isActive = false;
+
+        const btn = document.getElementById('start-vapi-btn');
+        const orb = document.getElementById('vapi-orb');
+        const statusText = document.getElementById('nanni-status');
+
+        async function toggleCall() {
+            if (isActive) {
+                vapi.stop();
+                return;
+            }
+
+            try {
+                if (statusText) statusText.innerText = "Frage Mikrofon an...";
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                stream.getTracks().forEach(t => t.stop());
+
+                if (statusText) statusText.innerText = "Verbindung wird aufgebaut...";
+                vapi.start(assistantId);
+            } catch (err) {
+                if (statusText) statusText.innerText = "Fehler: Mikrofonzugriff verweigert.";
+            }
+        }
+
+        vapi.on('call-start', () => {
+            isActive = true;
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-stop"></i> ' + (window.getTranslation ? window.getTranslation('btn_stop_voice') : 'Nanni stoppen');
+                btn.style.background = "#ff5e62";
+            }
+            if (orb) {
+                orb.classList.add('active', 'speaking');
+                orb.style.boxShadow = "0 0 50px #00bcd4";
+            }
+            if (statusText) statusText.innerText = "Nanni hört zu...";
+        });
+
+        vapi.on('call-end', () => {
+            isActive = false;
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-microphone"></i> ' + (window.getTranslation ? window.getTranslation('btn_start_voice') : 'Nanni starten');
+                btn.style.background = "";
+            }
+            if (orb) {
+                orb.classList.remove('active', 'speaking');
+                orb.style.boxShadow = "";
+            }
+            if (statusText) statusText.innerText = "Bereit für das nächste Gespräch.";
+        });
+
+        vapi.on('error', (e) => {
+            console.error(e);
+            if (statusText) statusText.innerText = "Verbindung unterbrochen. Bitte neu starten.";
+            isActive = false;
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-microphone"></i> ' + (window.getTranslation ? window.getTranslation('btn_start_voice') : 'Nanni starten');
+                btn.style.background = "";
+            }
+            if (orb) orb.classList.remove('active', 'speaking');
+        });
+
+        if (btn) btn.onclick = toggleCall;
+        if (orb) orb.onclick = toggleCall;
+    </script>
+</body>
+
+</html>

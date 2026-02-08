@@ -1,0 +1,90 @@
+═══════════════════════════════════════════════════════════════════
+  NANIL PULSE – UPLOAD & LINK (Veröffentlichung & Teilen)
+═══════════════════════════════════════════════════════════════════
+
+1. WAS MUSS HOCHGELADEN WERDEN?
+───────────────────────────────────────────────────────────────────
+   Den gesamten Ordner BACKUP_ALT_VERSION – aber nur diese Dateien:
+
+   PFLICHT:
+   • index.html, style.css, script.js
+   • nanni-config.example.js (als Vorlage)
+   • Ordner assets/ (alle Bilder, Videos)
+   • agb.html, datenschutz.html, impressum.html
+   • co-founder.html, danke.html, early-access.html
+   • investoren.html, promo.html
+
+   NICHT nötig (kannst du weglassen):
+   • *.bat, *.txt, *.md (Anleitungen)
+   • send-mail.php (braucht Server mit PHP)
+   • test.html
+   • WhatsApp Video... (wenn nicht auf der Seite verwendet)
+
+   WICHTIG: nanni-config.js wird NICHT hochgeladen (steht in .gitignore).
+   Online antwortet Nanni mit vordefinierten Stichwort-Antworten.
+   Für „jede Frage“: Siehe NANNI-SETUP.txt (Groq-Key nur lokal möglich).
+
+
+2. WO KANN ICH ES HOCHLADEN? (HOSTING)
+───────────────────────────────────────────────────────────────────
+
+   A) GITHUB PAGES (kostenlos, gut für Landingpages)
+      • GitHub.com → Neues Repository erstellen (z.B. "nanil-pulse")
+      • Alle Dateien hochladen (Drag & Drop oder Git)
+      • Settings → Pages → Source: main branch
+      • Link: https://DEIN-USERNAME.github.io/nanil-pulse/
+
+   B) NETLIFY (kostenlos, sehr einfach)
+      • Netlify.com → "Add new site" → "Deploy manually"
+      • Ordner BACKUP_ALT_VERSION per Drag & Drop hochziehen
+      • Fertig! Du bekommst sofort einen Link wie:
+        https://irgendwas.netlify.app
+      • Kannst du später umbenennen (z.B. nanil-pulse.netlify.app)
+
+   C) VERCEL (kostenlos)
+      • Ähnlich wie Netlify – Ordner hochziehen, Link erhalten
+
+   D) EIGENER WEBSERVER / HOSTING (z.B. Strato, IONOS, etc.)
+      • Per FTP alle Dateien in den Ordner public_html/ oder www/
+      • Dein Link: https://deine-domain.de
+
+
+3. WIE BEKOMME ICH DEN LINK?
+───────────────────────────────────────────────────────────────────
+   • GitHub Pages:  https://USERNAME.github.io/REPO-NAME/
+   • Netlify:       https://DEIN-SITE-NAME.netlify.app
+   • Eigene Domain: https://deine-domain.de
+
+
+4. WAS MACHEN MIT DEM LINK? (Überall posten)
+───────────────────────────────────────────────────────────────────
+   • Instagram Bio / Link-in-Bio
+   • LinkedIn Profil / Posts
+   • WhatsApp Status / Nachrichten
+   • E-Mail-Signatur
+   • Facebook, X (Twitter), TikTok
+   • QR-Code erstellen (z.B. qr-code-generator.com) und drucken
+
+   Tipp: Kurzlink erstellen (z.B. bit.ly, tinyurl.com), damit der Link
+   kürzer und merkbarer ist: z.B. bit.ly/nanil-pulse
+
+
+5. CHECKLISTE VOR DEM UPLOAD
+───────────────────────────────────────────────────────────────────
+   □ Alle Bilder in assets/ vorhanden?
+   □ Links zu agb.html, datenschutz.html, impressum.html funktionieren?
+   □ Seite lokal getestet (START-JETZT.bat)?
+   □ Nanni funktioniert (zumindest Stichwort-Antworten)?
+
+
+6. NACH DEM UPLOAD
+───────────────────────────────────────────────────────────────────
+   • Link im Browser öffnen und testen
+   • Auf dem Handy testen
+   • Nanni testen (Mikrofon erlauben)
+   • Alle Unterseiten anklicken (co-founder, agb, datenschutz, etc.)
+
+
+═══════════════════════════════════════════════════════════════════
+  Kurz: 1) Ordner hochladen → 2) Link kopieren → 3) Überall teilen
+═══════════════════════════════════════════════════════════════════

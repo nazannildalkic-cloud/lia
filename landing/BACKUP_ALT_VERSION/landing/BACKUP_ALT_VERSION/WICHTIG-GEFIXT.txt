@@ -1,0 +1,36 @@
+========================================
+  PROBLEM GEFUNDEN UND BEHOBEN
+========================================
+
+DAS WAR DAS PROBLEM:
+---------------------
+Einige Batch-Dateien hatten:  cd /d "%~dp0.."
+Das bedeutet: Sie sind in den ÜBERGEORDNETEN Ordner gewechselt
+und haben die FALSCHE (ältere) Version der Seite geladen!
+
+Du hast die finale Version in BACKUP_ALT_VERSION – aber die
+Batch-Dateien haben den Ordner DARÜBER bedient = alte Seite!
+
+
+WAS WURDE GEFIXT:
+-----------------
+• LOCALHOST-OEFFNEN.bat  → jetzt im richtigen Ordner, Port 5000
+• START.bat              → jetzt im richtigen Ordner, Port 5000
+• EINFACH-START.bat      → jetzt im richtigen Ordner, Port 5000
+
+
+SO STARTEST DU JETZT (immer gleich):
+------------------------------------
+1. Doppelklick auf:  START-JETZT.bat  ODER  LAUFEN.bat  ODER  SERVER-HIER.bat
+2. Fenster NICHT schließen!
+3. Browser öffnet:  http://localhost:5000
+4. Falls nicht: Manuell eingeben:  http://localhost:5000
+
+WICHTIG: http://  (nicht https://) – sonst SSL-Fehler!
+
+
+ALLE BATCH-DATEIEN NUTZEN JETZT:
+--------------------------------
+• Den Ordner BACKUP_ALT_VERSION (die finale Version)
+• Port 5000
+• http://localhost:5000
