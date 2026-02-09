@@ -1,29 +1,24 @@
 @echo off
 echo ========================================
-echo UPLOAD ZU GITHUB (REPARATUR & UPDATE)
+echo UPLOAD ZU GITHUB (NUR GEAENDERTE DATEIEN)
 echo ========================================
 echo.
 
 cd /d "%~dp0"
 
-echo 1. Entferne stoerende index.md...
-if exist index.md del index.md
-git rm --cached index.md 2>nul
-
-echo 2. Fuege wichtige Dateien hinzu...
-git add index.html index1.html script.js style.css landing.css _config.yml README.md .nojekyll nanni-config.js
+echo 1. Fuege Dateien hinzu...
+git add index.html script.js style.css landing.css
 
 echo.
-echo 3. Erstelle Commit (Reparatur)...
-git commit -m "FIX: Website Link Repariert & Config Update"
+echo 2. Erstelle Commit...
+git commit -m "Update: Design hell, Uebersetzungen, Bilder in einer Reihe"
 
 echo.
-echo 4. Lade hoch (Push)...
-git push
+echo 3. Lade hoch (Push)...
+git push origin main
 
 echo.
 echo ========================================
-echo FERTIG! Die Seite sollte in 1-2 Minuten wieder gehen.
-echo Link: https://nazannildalkic-cloud.github.io/nanni/
+echo FERTIG! Version ist online.
 echo ========================================
 pause
