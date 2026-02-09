@@ -163,6 +163,9 @@ window.translations = {
         sci_bg_text: "Aktuelle Forschung zeigt, dass sich Veränderungen im menschlichen Zustand in feinen Mustern der Stimme widerspiegeln. Studien aus der Stoffwechsel- und Mental-Health-Forschung belegen, dass KI-Modelle solche Abweichungen erkennen und als Hinweis auf Belastungen oder Dysregulationen nutzen können. Nanil greift diese Erkenntnisse auf, um Stimme als System-Signal zu verstehen – nicht zur Diagnose, sondern zur frühen Orientierung und situativen Unterstützung.",
         view_studies_btn: "Studien ansehen",
         modal_studies_title: "Wissenschaftliche Quellen",
+        features_studies_title: "Alle Funktionen & Studien",
+        voice_study_title: "Stimmen-Analyse (Diabetes-Risiko)",
+        voice_study_badge: "🧪 Wichtige Studie",
 
         // Gründerin
         founder_title: "Die Gründerin",
@@ -401,6 +404,9 @@ window.translations = {
         sci_bg_text: "Current research shows that changes in human condition are reflected in subtle patterns of the voice. Studies from metabolic and mental health research demonstrate that AI models can detect such deviations and use them as indicators of stress or dysregulation. Nanil builds on these findings to understand voice as a system signal – not for diagnosis, but for early orientation and situational support.",
         view_studies_btn: "View Studies",
         modal_studies_title: "Scientific Sources",
+        features_studies_title: "All Features & Studies",
+        voice_study_title: "Voice Analysis (Diabetes Risk)",
+        voice_study_badge: "🧪 Key Study",
 
         // Founder
         founder_title: "The Founder",
@@ -640,6 +646,9 @@ window.translations = {
         sci_bg_text: "Güncel araştırmalar, insan durumundaki değişikliklerin ince ses desenlerinde yankılandığını göstermektedir. Metabolik ve ruh sağlığı araştırmalarından elde edilen çalışmalar, yapay zeka modellerinin bu tür sapmaları tespit edebildiğini ve bunları stres veya düzensizlik göstergesi olarak kullanabildiğini kanıtlamaktadır. Nanil bu bulgulara dayanarak sesi bir sistem sinyali olarak anlar – teşhis için değil, erken yönlendirme ve durumsal destek için.",
         view_studies_btn: "Çalışmaları Görüntüle",
         modal_studies_title: "Bilimsel Kaynaklar",
+        features_studies_title: "Tüm Özellikler & Çalışmalar",
+        voice_study_title: "Ses Analizi (Diyabet Riski)",
+        voice_study_badge: "🧪 Önemli Çalışma",
 
         // Kurucu
         founder_title: "Kurucu",
@@ -796,6 +805,9 @@ window.setLanguage = function (lang) {
     updateText('#sci-bg-text', t.sci_bg_text);
     updateText('#label-view-studies', t.view_studies_btn);
     updateText('#modal-studies-title', t.modal_studies_title);
+    updateText('#features-studies-title', t.features_studies_title);
+    updateText('#voice-study-title', t.voice_study_title);
+    updateText('#voice-study-badge', t.voice_study_badge);
     updateAttr('#img-vagus-about', 'alt', t.img_vagus_about);
 
     // How it works
