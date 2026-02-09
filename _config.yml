@@ -1,4 +1,0 @@
-# GitHub Pages Configuration
-# Force index.html to be used as the index page
-include: ['index.html']
-exclude: []
