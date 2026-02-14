@@ -1,4 +1,5 @@
-# Nanni: Für GitHub Pages muss nanni-config.js MIT im Repo sein (sonst Groq-Key fehlt)
+# Nanni: API-Key nicht ins Repo (Sicherheit). Lokal: nanni-config.example.js → nanni-config.js kopieren, Key eintragen.
+nanni-config.js
 
 # Umgebungsvariablen / lokale Konfiguration
 .env

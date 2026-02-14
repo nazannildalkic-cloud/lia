@@ -11,6 +11,6 @@ NANIL Pulse – In 3 Schritten hochladen
    (Oder: In diesem Ordner cmd oeffnen, dann: git commit -m "Update NANIL Pulse" && git push origin main)
 
 3. FERTIG
-   Seite ist live unter: https://nazannildalkic-cloud.github.io/nanni/
+   Seite ist live unter: https://nanilpulse.art
 
 Die Aenderungen (DEPLOY-NOW.md + verbessertes Upload-Skript) sind bereits vorbereitet und gestaged.

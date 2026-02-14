@@ -21,6 +21,6 @@ git push
 echo.
 echo ========================================
 echo UND JETZT WARTEN (ca 1-2 Minute)
-echo Link: https://nazannildalkic-cloud.github.io/nanni/
+echo Link: https://nanilpulse.art
 echo ========================================
 pause

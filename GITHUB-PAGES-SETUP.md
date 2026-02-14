@@ -27,12 +27,17 @@
 
 ---
 
-### 3. Deine URL
+### 3. Deine URL / Custom Domain
 
-- **Projekt-Seite:** `https://DEIN-USERNAME.github.io/REPO-NAME/`
-- Beispiel: `https://nazannildalkic-cloud.github.io/nanil-pulse/`
+- **Eigene Domain:** **https://nanilpulse.art** (in Repo-Root liegt die Datei `CNAME` mit dem Inhalt `nanilpulse.art`)
+- **GitHub-Standard:** `https://DEIN-USERNAME.github.io/REPO-NAME/` (z. B. `https://nazannildalkic-cloud.github.io/nanni/`)
 
-**Wichtig:** Am Ende **mit** Schrägstrich `/` – sonst können relative Links (assets/) kaputtgehen.
+**Custom Domain einrichten (nanilpulse.art):**
+1. Im Repo-Root eine Datei **`CNAME`** anlegen (ohne Endung), Inhalt genau: `nanilpulse.art`
+2. GitHub: **Settings** → **Pages** → unter "Custom domain" `nanilpulse.art` eintragen → **Save**
+3. Beim Domain-Anbieter: **A-Record** auf `185.199.108.153` (und ggf. die anderen GitHub-Pages-IPs) zeigen lassen, oder **CNAME** auf `DEIN-USERNAME.github.io`
+
+**Wichtig:** Relative Links (assets/) funktionieren mit und ohne Schrägstrich.
 
 ---
 

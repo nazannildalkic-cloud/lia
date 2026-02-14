@@ -19,6 +19,6 @@ echo ========================================
 echo.
 echo Aenderungen sind auf GitHub!
 echo In 1-2 Minuten live auf:
-echo https://nazannildalkic-cloud.github.io/nanni/
+echo https://nanilpulse.art
 echo.
 pause

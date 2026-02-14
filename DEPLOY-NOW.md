@@ -2,7 +2,7 @@
 
 ## Deine Live-URL (GitHub Pages)
 
-**https://nazannildalkic-cloud.github.io/nanni/**
+**https://nanilpulse.art**
 
 (Im Browser mit Schrägstrich am Ende aufrufen.)
 
