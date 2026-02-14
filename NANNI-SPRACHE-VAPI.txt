@@ -1,0 +1,44 @@
+Nanni spricht in der richtigen Sprache (DE/EN/TR)
+================================================
+
+Die Webseite übergibt an Nanni (Vapi) jetzt die aktuelle Seiten-Sprache:
+  • DE gewählt → variable "language" = "de"
+  • EN gewählt → variable "language" = "en"
+  • TR gewählt → variable "language" = "tr"
+
+Damit Nanni sofort auf Deutsch, Englisch oder Türkisch grüßt und antwortet,
+musst du im Vapi-Dashboard eine Variable nutzen und in der Anweisung erwähnen.
+
+Schritte im Vapi-Dashboard (dashboard.vapi.ai):
+------------------------------------------------
+1. Deinen Nanni-Assistenten öffnen (Assistant mit der ID, die auf der Seite verwendet wird).
+
+2. Variable anlegen (falls noch nicht vorhanden):
+   • Unter "Variables" oder "Assistant Overrides" eine Variable namens
+     language (oder genau so, wie im Code: variableValues.language)
+   • Typ: Text / string.
+
+3. System Prompt / First Message – PFLICHT für Grüße + Antworten in allen Sprachen:
+   • First Message (erste Nachricht): Muss gesetzt sein, damit Nanni überhaupt spricht.
+   • System Prompt muss enthalten:
+
+   "Du bist Nanni. Die Variable {{language}} gibt die Sprache an.
+    Wenn {{language}} = 'de', sprich NUR Deutsch (Grüße und alle Antworten).
+    Wenn {{language}} = 'en', sprich NUR Englisch.
+    Wenn {{language}} = 'tr', sprich NUR Türkisch.
+    Begrüße den Nutzer sofort am Anfang in dieser Sprache.
+    WICHTIG: Antworte immer, wenn der Nutzer etwas sagt – in derselben Sprache.
+    Halte Antworten kurz und freundlich."
+
+4. Damit Nanni auf Sprechen reagiert:
+   • Im Assistant muss ein Sprachmodell (z. B. GPT) aktiv sein.
+   • "First message" oder "Greeting" muss aktiviert sein.
+   • Kein "Silence" oder "Do not respond" in den Einstellungen.
+
+5. Speichern und testen: DE/EN/TR auf der Seite wählen, "Nanni starten" klicken.
+   Nanni soll in der gewählten Sprache grüßen und auf jede Äußerung antworten.
+
+Technisch (Seite):
+------------------
+vapi.start(assistantId, { variableValues: { language: 'de'|'en'|'tr' }, transcriber: { model: 'nova-2', language: 'multi' } })
+Sprache kommt von: localStorage.selectedLang (DE/EN/TR-Buttons).

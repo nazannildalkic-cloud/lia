@@ -1,0 +1,36 @@
+═══════════════════════════════════════════════════════════════
+  Nanni sofort zum Laufen bringen
+═══════════════════════════════════════════════════════════════
+
+ZWEI Wege, Nanni zu nutzen:
+
+───────────────────────────────────────────────────────────────
+1. SCHWEBENDE NANNI (Groq) – funktioniert sofort
+───────────────────────────────────────────────────────────────
+
+   • Doppelklick auf:  START-NANNI.bat
+   • Warten, bis der Browser unter http://localhost:8000 öffnet
+   • Unten rechts erscheint der Nanni-Button (Mikrofon)
+   • Klicken → Mikrofon erlauben → mit Nanni sprechen
+
+   Der Groq-Key ist bereits in nanni-config.js eingetragen.
+   Diese Nanni antwortet per KI (Groq) + Browser-Sprache.
+
+───────────────────────────────────────────────────────────────
+2. VOICE-SEKTION (Vapi) – „Nanni starten“ auf der Seite
+───────────────────────────────────────────────────────────────
+
+   Funktioniert nur, wenn im Vapi-Dashboard die Adresse erlaubt ist:
+
+   1. Seite trotzdem über START-NANNI.bat öffnen (localhost:8000)
+   2. Auf https://dashboard.vapi.ai gehen
+   3. API Keys → Public Key → Allowed Origins
+   4. Eintragen:  http://localhost:8000
+   5. Speichern, Seite neu laden
+
+   Danach funktioniert auch der Button „Nanni starten“ in der
+   Voice-Sektion (Vapi-Cloud-Voice).
+
+───────────────────────────────────────────────────────────────
+
+Kurz: START-NANNI.bat doppelklicken → schwebende Nanni nutzen.

@@ -1,0 +1,33 @@
+═══════════════════════════════════════════════════════════════
+  "Verbindung fehlgeschlagen" bei Nanni – Checkliste
+═══════════════════════════════════════════════════════════════
+
+Die Meldung erscheint, wenn Nanni (Vapi Voice) keine Verbindung aufbauen kann.
+
+1. SEITE ÜBER LOCALHOST ÖFFNEN (nicht per Doppelklick auf index.html)
+   • Doppelklick = file://  →  Nanni funktioniert NICHT
+   • Stattdessen:
+     - Im Ordner "Nannil Web" eine Eingabeaufforderung öffnen
+     - Befehl:  python -m http.server 8000
+     - Im Browser öffnen:  http://localhost:8000
+
+2. VAPI-DASHBOARD: ALLOWED ORIGINS
+   • Auf https://dashboard.vapi.ai gehen
+   • API Keys → Public Key auswählen
+   • Unter "Allowed Origins" (oder ähnlich) eintragen:
+     - http://localhost:8000
+     - (Falls du Port 3000 nutzt: http://localhost:3000)
+   • Ohne diesen Eintrag blockiert Vapi die Verbindung.
+
+3. INTERNET & FIREWALL
+   • Internetverbindung prüfen
+   • Kein VPN/Firewall, der Vapi blockiert
+
+4. BROWSER
+   • Mikrofon-Berechtigung für die Seite erlauben
+   • Am besten Chrome oder Edge
+
+═══════════════════════════════════════════════════════════════
+  Kurz: localhost:8000 nutzen + diese URL im Vapi-Dashboard
+        unter "Allowed Origins" eintragen.
+═══════════════════════════════════════════════════════════════

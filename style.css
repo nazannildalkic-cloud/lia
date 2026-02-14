@@ -40,17 +40,18 @@
     /* Layout */
     --container-width: 720px;
     /* Viel schmaler = Handy-Look / Kompakter */
+    --top-bar-height: 40px;
     --header-height: 72px;
     --banner-height: 48px;
 
     --gradient-cyan: linear-gradient(135deg, #4a7c88 0%, #5d9aa8 50%, #7eb8c4 100%);
 }
 
-/* Early Access Banner – unter dem Header, immer sichtbar */
+/* Early Access Banner – unter Top-Leiste + Header */
 .early-access-banner {
-    margin-top: var(--header-height);
+    margin-top: calc(var(--top-bar-height) + var(--header-height));
     position: sticky;
-    top: var(--header-height);
+    top: calc(var(--top-bar-height) + var(--header-height));
     z-index: 9999;
     background: linear-gradient(90deg, #a68b1f, #c9a227, #e2c96a);
     padding: 14px 24px;
@@ -173,7 +174,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--header-height) + var(--banner-height));
+    scroll-padding-top: calc(var(--top-bar-height) + var(--header-height) + var(--banner-height));
     font-size: 14px;
 }
 
@@ -344,10 +345,10 @@ ul {
 header {
     height: var(--header-height);
     position: fixed;
-    top: 0;
+    top: var(--top-bar-height);
     left: 0;
     width: 100%;
-    z-index: 10002;
+    z-index: 10000;
     background: rgba(5, 5, 5, 0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -384,6 +385,45 @@ header .container {
     height: 48px;
     max-height: 48px;
     object-fit: contain;
+}
+
+/* Ganz oben: Vorseite + Konzept – überdeckt keine andere Schrift */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10002;
+    background: rgba(10, 10, 12, 0.97);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 0;
+    min-height: var(--top-bar-height);
+    box-sizing: border-box;
+}
+.top-bar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 0 24px;
+    max-width: 100%;
+}
+.top-bar-btn {
+    display: inline-block;
+    color: #f4f4f6 !important;
+    background: transparent;
+    border: 1px solid rgba(126, 184, 196, 0.6);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.top-bar-btn:hover {
+    background: var(--cyan-primary);
+    color: #0a0a0c !important;
+    border-color: var(--cyan-primary);
 }
 
 /* Nav + Sprachumschalter: immer sichtbar, Gründerin und DE/EN/TR nicht abschneiden */
@@ -935,6 +975,37 @@ nav a.active {
 
 .nanni-btn.nanni-active:hover {
     box-shadow: 0 6px 28px rgba(255, 94, 98, 0.5);
+}
+
+/* ===== FLOAT BUTTONS WRAP (Nanni + WhatsApp) – immer sichtbar, kein Toggle ===== */
+.float-buttons-wrap {
+    position: fixed !important;
+    bottom: 24px !important;
+    right: 24px !important;
+    z-index: 2000 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: flex-end !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+.float-buttons-wrap .float-btn,
+.float-buttons-wrap a {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: flex !important;
+    pointer-events: auto !important;
+}
+.float-btn-nanni .float-btn-label {
+    color: #fff !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+.float-btn-whatsapp {
+    background: #25D366 !important;
+    color: #fff !important;
 }
 
 /* ===== VOICE INTERFACE (Nanni) ===== */

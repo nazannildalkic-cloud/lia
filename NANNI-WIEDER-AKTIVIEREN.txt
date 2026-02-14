@@ -1,0 +1,16 @@
+Nanni ist derzeit auf der Hauptseite deaktiviert.
+================================================
+
+Wenn Nanni (Vapi) wieder aktiv sein soll:
+
+1. In index.html:
+   - Die Sektion id="voice" wieder einblenden: style="display:none;" und aria-hidden="true" entfernen.
+   - Den alten Voice-Bereich mit Orb, Button "Nanni starten" und Vapi-Skript wieder einkopieren (aus Backup oder aus der Version vor der Deaktivierung).
+   - Den schwebenden "Frag Nanni"-Button wieder in die float-buttons-wrap vor dem WhatsApp-Button einfügen.
+
+2. In script.js:
+   - btn_hero_voice wieder auf "Frag Nanni" / "Ask Nanni" / "Nanni'ye Sor" setzen (DE/EN/TR), falls der Hero-Button wieder zu Nanni führen soll.
+
+3. Vapi-Dashboard prüfen (NANNI-SPRACHE-VAPI.txt), damit Nanni in allen Sprachen grüßt und antwortet.
+
+Aktuell: Nur der WhatsApp-Button ist unten rechts sichtbar; die Seite läuft ohne Nanni.

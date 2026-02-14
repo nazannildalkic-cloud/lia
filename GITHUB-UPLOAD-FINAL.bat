@@ -6,16 +6,16 @@ echo.
 
 cd /d "%~dp0"
 
-echo 1. Fuege Dateien hinzu...
-git add index.html script.js style.css landing.css
+echo 1. Fuege alle Dateien hinzu (inkl. assets/)...
+git add -A
 
 echo.
 echo 2. Erstelle Commit...
-git commit -m "Update: Design hell, Uebersetzungen, Bilder in einer Reihe"
+git commit -m "Nanni: Begruessung in DE/EN/TR (variableValues.language), Upload"
 
 echo.
 echo 3. Lade hoch (Push)...
-git push origin main
+git push origin main 2>nul || git push origin master 2>nul || git push
 
 echo.
 echo ========================================

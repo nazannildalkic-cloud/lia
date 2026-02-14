@@ -1,0 +1,26 @@
+NANIL Pulse – Wo finde ich "Nanni starten"?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  START-NANNI.bat (Server starten + Browser öffnen)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Voller Pfad:
+
+  C:\Users\nazan\OneDrive\Dokumente\nanil369\nanil-pulse\Nannil Web\START-NANNI.bat
+
+So findest du die Datei:
+  • Öffne den Ordner "Nannil Web" (im nanil-pulse Projekt).
+  • Dort liegt START-NANNI.bat – Doppelklick startet den Server und öffnet
+    http://localhost:8000 im Browser. Nanni (schwebender Button) funktioniert
+    dann, wenn du die Seite über localhost aufrufst.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Nanni- und WhatsApp-Buttons auf den Seiten
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • index.html (Hauptseite)  – Hat unten rechts: "Frag Nanni" + WhatsApp.
+  • index1.html (Konzept)   – Hat jetzt ebenfalls unten rechts: Nanni + WhatsApp.
+  • Vorseite (vorpage.html) – eigene Links je nach Seite.
+
+Nanni-Button auf der Konzept-Seite (index1.html) bringt dich zur Voice-Sektion
+auf der Hauptseite (index.html#voice), wo du "Nanni starten" nutzen kannst.

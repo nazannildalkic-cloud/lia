@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+<!-- VORSEITE (Front) – zuletzt geändert: 13.02.2026 – keine Nanni/WhatsApp-Buttons -->
 <html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nanil Pulse — Ein System für Kontext</title>
+    <title>NANIL Pulse – Ein System für Kontext</title>
     <meta name="description" content="Gesundheits-Wearables messen nur Daten. Wir leiten Kontext ab.">
     <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,53 +15,89 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="landing.css?v=4">
-    <style>
-        /* Float-Buttons immer sichtbar – kein Ausblenden durch andere Styles */
-        .float-buttons-fixed,
-        .float-buttons-fixed a { visibility: visible !important; opacity: 1 !important; display: flex !important; pointer-events: auto !important; }
-    </style>
+    <style>.top-bar-vorpage + header { top: 40px !important; } body.vorpage-compact main { padding-top: 180px !important; }</style>
 </head>
 
-<body>
+<body class="vorpage-compact">
+    <div class="top-bar top-bar-vorpage" style="position:fixed;top:0;left:0;right:0;z-index:10002;background:rgba(10,10,12,0.97);border-bottom:1px solid rgba(255,255,255,0.08);padding:8px 24px;display:flex;gap:12px;">
+        <a href="index.html" style="color:#f4f4f6;border:1px solid rgba(126,184,196,0.6);padding:6px 14px;border-radius:6px;font-size:0.8rem;font-weight:600;text-decoration:none;">Hauptseite</a>
+        <a href="index1.html" style="color:#f4f4f6;border:1px solid rgba(126,184,196,0.6);padding:6px 14px;border-radius:6px;font-size:0.8rem;font-weight:600;text-decoration:none;">Konzept</a>
+    </div>
     <header>
-        <a href="index.html" class="logo-link" aria-label="Nanil Pulse – Hauptseite">
-            <img src="assets/logo.jpg" alt="Nanil Pulse">
+        <a href="vorpage.html" class="logo-link" aria-label="NANIL Pulse – Vorseite">
+            <img src="assets/logo.jpg" alt="NANIL Pulse">
         </a>
         <div class="header-nav">
             <a href="index.html" class="main-site-link"
-                style="margin-right: 10px; font-weight: bold; border: 1px solid currentColor; padding: 5px 10px; border-radius: 4px;">ZUR
-                HAUPT-VERSION</a>
-            <a href="https://nazannildalkic-cloud.github.io/nanni/" target="_blank" class="main-site-link">System
-                erkunden</a>
+                style="margin-right: 10px; font-weight: bold; border: 1px solid currentColor; padding: 5px 10px; border-radius: 4px;">Zur
+                Hauptseite</a>
+            <a href="index1.html" class="main-site-link"
+                style="margin-right: 10px; font-weight: bold; border: 1px solid currentColor; padding: 5px 10px; border-radius: 4px;">Konzept</a>
+            <a href="#system-section" class="main-site-link">System erkunden</a>
             <div class="lang-switcher">
-                <a href="index.html" class="active">DE</a>
+                <a href="vorpage.html" class="active">DE</a>
                 <a href="en.html">EN</a>
                 <a href="tr.html">TR</a>
             </div>
         </div>
     </header>
 
+    <div class="sofort-strip" role="navigation" aria-label="Schnellzugriff">
+        <div class="sofort-strip-inner">
+            <a href="index.html#products" class="sofort-link"><span class="sofort-icon">🛒</span> Kaufkunden</a>
+            <a href="#erster-abschnitt" class="sofort-link"><span class="sofort-icon">📷</span> Produkt & Bilder</a>
+            <a href="#investors" class="sofort-link"><span class="sofort-icon">💼</span> Investoren</a>
+            <a href="#co-founders" class="sofort-link"><span class="sofort-icon">👥</span> Co-Founder</a>
+            <a href="#partner" class="sofort-link"><span class="sofort-icon">🤝</span> Partner</a>
+        </div>
+    </div>
+
     <main>
-        <section class="hero-section">
+        <section class="hero-section hero-section-compact hero-text-small">
             <h1>Bio-Wearables sind veraltet.<br>Die Zukunft ist kontextuell.</h1>
             <p>Ein System, das nicht nur misst, sondern versteht – und Ihnen die Muster Ihres Körpers aufzeigt.</p>
             <a href="#final-cta" class="cta-btn">Das volle Potenzial entdecken</a>
         </section>
 
+        <section class="audience-vorpage" aria-label="Ansprechpartner">
+            <div class="audience-vorpage-inner audience-buttons-row">
+                <a href="#investors" class="audience-vorpage-link"><span class="audience-vorpage-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></span> Investoren</a>
+                <a href="#co-founders" class="audience-vorpage-link"><span class="audience-vorpage-icon" aria-hidden="true"><i class="fas fa-handshake"></i></span> Co-Founder</a>
+                <a href="#partner" class="audience-vorpage-link"><span class="audience-vorpage-icon" aria-hidden="true"><i class="fas fa-network-wired"></i></span> Partner</a>
+            </div>
+            <div class="audience-vorpage-cards audience-cards-row">
+                <div id="investors" class="audience-vorpage-card">
+                    <h3>Investoren</h3>
+                    <p>Pitch Deck, Finanzplanung, Technologie & Roadmap. Seed-Phase.</p>
+                    <a href="investoren.html" class="audience-vorpage-btn">Pitch Deck anfordern</a>
+                </div>
+                <div id="co-founders" class="audience-vorpage-card">
+                    <h3>Co-Founder</h3>
+                    <p>Strategische Partner mit Vision. Gestalten Sie mit.</p>
+                    <a href="co-founder.html" class="audience-vorpage-btn">Co-Founder werden</a>
+                </div>
+                <div id="partner" class="audience-vorpage-card">
+                    <h3>Partner</h3>
+                    <p>Kooperationen, Vertrieb, gemeinsame Projekte.</p>
+                    <a href="index.html#contact" class="audience-vorpage-btn">Kontakt aufnehmen</a>
+                </div>
+            </div>
+        </section>
+
         <section id="erster-abschnitt">
             <div class="image-box">
-                <img src="assets/ring-patch.jpg.jpeg" alt="Nanil Ring und Patch System">
+                <img src="assets/ring-patch.jpg.jpeg" alt="NANIL Ring und Patch System">
             </div>
-            <h1>Nanil ist kein Wearable.<br>Es ist ein System.</h1>
+            <h1>NANIL ist kein Wearable.<br>Es ist ein System.</h1>
             <p>Ein App-first System, das Kontext aus Sensorik systematisch ableitet und Zusammenhänge im Alltag sichtbar
                 macht.</p>
             <p class="disclaimer">Wellbeing-orientiert. Nicht medizinisch.</p>
         </section>
 
-        <section class="system-section">
+        <section id="system-section" class="system-section">
             <h2>So ist das System gedacht</h2>
             <div class="image-box">
-                <img src="assets/final-zeichnung.jpg.jpeg" alt="Nanil Systemlogik – App als Zentrum">
+                <img src="assets/final-zeichnung.jpg.jpeg" alt="NANIL Systemlogik – App als Zentrum">
             </div>
             <p>Die App ist das zentrale System.<br>Ring und Patch liefern Rohdaten.</p>
             <p>Der Mehrwert entsteht nicht durch einzelne Werte, sondern durch deren Beziehung zueinander.</p>
@@ -68,14 +105,14 @@
 
         <section>
             <h2>Abgrenzung</h2>
-            <p class="bold">Nanil misst nicht mehr.<br>Nanil interpretiert anders.</p>
+            <p class="bold">NANIL misst nicht mehr.<br>NANIL interpretiert anders.</p>
             <p>Kein Fokus auf isolierte KPIs.<br>Kein Optimieren auf Tageswerte.<br>Sondern Muster über Zeit, Kontext
                 und Verhalten.</p>
             <div class="highlight-box">
                 <p><span>Wissenschaftlicher Hintergrund:</span> Aktuelle Forschung zeigt, dass sich Veränderungen im
                     menschlichen Zustand in feinen Mustern der Stimme widerspiegeln. Studien aus der Stoffwechsel- und
                     Mental-Health-Forschung belegen, dass KI-Modelle solche Abweichungen erkennen und als Hinweis auf
-                    Belastungen oder Dysregulationen nutzen können. Nanil greift diese Erkenntnisse auf, um Stimme als
+                    Belastungen oder Dysregulationen nutzen können. NANIL greift diese Erkenntnisse auf, um Stimme als
                     System-Signal zu verstehen – nicht zur Diagnose, sondern zur frühen Orientierung und situativen
                     Unterstützung.</p>
                 <br><br>
@@ -88,25 +125,16 @@
 
         <section>
             <h2>Status</h2>
-            <p class="bold">Nanil ist ein Early-Stage-Projekt.</p>
+            <p class="bold">NANIL ist ein Early-Stage-Projekt.</p>
             <p>Die Systemarchitektur steht.<br>Die App wird zuerst entwickelt.<br>Hardware folgt, wenn das System trägt.
             </p>
-        </section>
-
-        <section>
-            <h2>Die Gründerin</h2>
-            <p class="bold">Hinter NANIL Pulse steht eine Person mit Vision und Expertise.</p>
-            <p><strong>Nazan Nil Dalkic (Nazannil)</strong></p>
-            <p>35+ Jahre Erfahrung in Wellness und Stress-Management. NLP Master, Reiki-Meisterin. Mehrsprachig:
-                Deutsch, Türkisch, Englisch. Ihre Mission: Technologie mit therapeutischer Kompetenz verbinden – so ist
-                NANIL Pulse entstanden.</p>
         </section>
 
         <section class="final-cta" id="final-cta">
             <h2>Gestalten Sie die Zukunft des personalisierten Wohlbefindens.</h2>
             <p>Wir suchen visionäre Co-Founder, Partner und Seed-Investoren, die bereit sind, eine neue Kategorie zu
                 definieren. Dies ist die Gelegenheit, von Anfang an dabei zu sein.</p>
-            <a href="kontakt.html" class="cta-btn">Kontakt aufnehmen & Pitch Deck anfordern</a>
+            <a href="index.html#contact" class="cta-btn">Kontakt aufnehmen & Pitch Deck anfordern</a>
         </section>
     </main>
 
@@ -116,27 +144,11 @@
             <a href="datenschutz.html">Datenschutz</a>
             <a href="agb.html">AGB</a>
         </div>
-        <p class="footer-disclaimer">Nanil Pulse ist kein medizinisches Produkt. Keine Diagnose, Behandlung oder
+        <p class="footer-disclaimer">NANIL Pulse ist kein medizinisches Produkt. Keine Diagnose, Behandlung oder
             Therapie.</p>
         <p style="font-size:0.75rem;opacity:0.7;margin-top:8px;">Seite zuletzt aktualisiert: 13.02.2026</p>
     </footer>
 
-    <!-- Schwebende Buttons: Nanni (zur Voice-Seite) + WhatsApp – immer sichtbar -->
-    <div class="float-buttons-fixed" style="position: fixed; bottom: 24px; right: 24px; z-index: 2000; display: flex !important; flex-direction: column; gap: 12px; align-items: flex-end; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important;" aria-label="Frag Nanni und WhatsApp">
-        <a href="index.html#voice" class="float-btn-nanni" title="Frag Nanni – Voice-KI"
-            style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #00CED1, #20B2AA); color: #fff; font-size: 24px; box-shadow: 0 4px 16px rgba(0,206,209,0.4); text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease;"
-            onmouseenter="this.style.transform='scale(1.08)'; this.style.boxShadow='0 6px 20px rgba(0,206,209,0.5)'"
-            onmouseleave="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 16px rgba(0,206,209,0.4)'">
-            <i class="fas fa-microphone" aria-hidden="true"></i>
-        </a>
-        <a href="https://wa.me/491776480485" target="_blank" rel="noopener" title="WhatsApp"
-            style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #FFF; font-size: 28px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); text-decoration: none; transition: transform 0.2s ease;"
-            onmouseenter="this.style.transform='scale(1.1)'" onmouseleave="this.style.transform='scale(1)'">
-            <i class="fab fa-whatsapp" aria-hidden="true"></i>
-        </a>
-    </div>
-
-    <!-- Studies Modal -->
     <div id="studies-modal"
         style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 3000; align-items: center; justify-content: center; backdrop-filter: blur(5px);">
         <div
@@ -147,42 +159,44 @@
                 style="color: #333; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
                 Wissenschaftliche Quellen</h3>
             <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
-                <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11658629/" target="_blank"
+                <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11658629/" target="_blank" rel="noopener"
                         style="color: #007bff; text-decoration: none;">A voice-based algorithm can predict type 2
                         diabetes status <i class="fas fa-external-link-alt"></i></a></li>
                 <li><a href="https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000679"
-                        target="_blank" style="color: #007bff; text-decoration: none;">PLOS Digital Health – AI for
+                        target="_blank" rel="noopener" style="color: #007bff; text-decoration: none;">PLOS Digital Health – AI for
                         diabetes screening <i class="fas fa-external-link-alt"></i></a></li>
                 <li><a href="https://www.lih.lu/en/article/say-hello-to-non-invasive-screening-new-ai-tool-identifies-diabetes-using-voice-analysis/"
-                        target="_blank" style="color: #007bff; text-decoration: none;">Luxembourg Institute of Health –
+                        target="_blank" rel="noopener" style="color: #007bff; text-decoration: none;">Luxembourg Institute of Health –
                         Colive Voice <i class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="https://www.colivevoice.org/de/die-studie/seite-publikationen/" target="_blank"
+                <li><a href="https://www.colivevoice.org/de/die-studie/seite-publikationen/" target="_blank" rel="noopener"
                         style="color: #007bff; text-decoration: none;">Colive Voice – Publications <i
                             class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="https://www.jmir.org/2024/1/e58572/" target="_blank"
+                <li><a href="https://www.jmir.org/2024/1/e58572/" target="_blank" rel="noopener"
                         style="color: #007bff; text-decoration: none;">JMIR – Speech analysis for mental state <i
                             class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10415910/" target="_blank"
+                <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10415910/" target="_blank" rel="noopener"
                         style="color: #007bff; text-decoration: none;">Systematic Review – Vocal Biomarkers <i
                             class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="https://arxiv.org/abs/2411.19204" target="_blank"
+                <li><a href="https://arxiv.org/abs/2411.19204" target="_blank" rel="noopener"
                         style="color: #007bff; text-decoration: none;">Voice-based triage using AI <i
                             class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="https://arxiv.org/abs/1910.10082" target="_blank"
+                <li><a href="https://arxiv.org/abs/1910.10082" target="_blank" rel="noopener"
                         style="color: #007bff; text-decoration: none;">Estimating well-being from voice <i
                             class="fas fa-external-link-alt"></i></a></li>
             </ul>
         </div>
     </div>
     <script>
-        const btn = document.getElementById('btn-view-studies');
-        const modal = document.getElementById('studies-modal');
-        const close = document.getElementById('close-studies-modal');
-        if (btn && modal && close) {
-            btn.onclick = (e) => { e.preventDefault(); modal.style.display = 'flex'; };
-            close.onclick = () => modal.style.display = 'none';
-            modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
-        }
+        (function() {
+            var btn = document.getElementById('btn-view-studies');
+            var modal = document.getElementById('studies-modal');
+            var close = document.getElementById('close-studies-modal');
+            if (btn && modal && close) {
+                btn.onclick = function(e) { e.preventDefault(); modal.style.display = 'flex'; };
+                close.onclick = function() { modal.style.display = 'none'; };
+                modal.onclick = function(e) { if (e.target === modal) modal.style.display = 'none'; };
+            }
+        })();
     </script>
 </body>
 

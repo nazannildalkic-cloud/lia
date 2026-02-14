@@ -1,0 +1,38 @@
+============================================
+  NANIL Web – So klappt es
+============================================
+
+WICHTIG: Diese Dateien müssen aus DIESEM Ordner geöffnet werden:
+  C:\Users\nazan\OneDrive\Dokumente\nanil369\nanil-pulse\Nannil Web
+
+--------------------------------------------
+Schritt 1 – Ordner in Cursor öffnen
+--------------------------------------------
+• Cursor öffnen
+• File → Open Folder (oder Strg+K, Strg+O)
+• Obigen Pfad einfügen und "Ordner auswählen" klicken
+• Dann siehst du index.html, vorpage.html, style.css usw.
+
+--------------------------------------------
+Schritt 2 – Seite im Browser testen
+--------------------------------------------
+• Im Ordner "Nannil Web" die Datei START-NANNI.bat doppelklicken
+  ODER
+• Im Ordner "Nannil Web" in der Adresszeile cmd eingeben, Enter
+  Dann: python -m http.server 8000
+• Browser öffnen: http://localhost:8000
+• Du siehst die Hauptseite (index.html) mit Nanni + WhatsApp unten rechts
+
+--------------------------------------------
+Was wo ist
+--------------------------------------------
+• Hauptseite (Main): index.html  → Nanni- und WhatsApp-Button unten rechts
+• Vorseite (Front): vorpage.html → keine schwebenden Buttons, Link "Konzept" im Header
+• Konzept: index1.html → über "KONZEPT" oder "Konzept" von Haupt- oder Vorseite
+
+--------------------------------------------
+Wenn es trotzdem nicht klappt
+--------------------------------------------
+• Liegt dein Projekt woanders? Dann sag den genauen Ordnerpfad.
+• OneDrive-Sync: Kurz warten, ob der Ordner aktuell ist.
+• Browser: Seite mit Strg+F5 neu laden (Cache leeren).

@@ -61,8 +61,8 @@ header {
 
 .main-site-link,
 .main-site-link:visited {
-    color: var(--accent) !important;
-    border-color: var(--accent) !important;
+    color: #f4f4f6 !important;
+    border-color: rgba(244, 244, 246, 0.6) !important;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -70,7 +70,7 @@ header {
 .main-site-link:hover {
     color: #fff !important;
     border-color: #fff !important;
-    background: rgba(201, 162, 39, 0.1);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .logo-link img {
