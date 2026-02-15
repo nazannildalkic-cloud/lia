@@ -937,6 +937,36 @@ nav a.active {
     box-shadow: 0 6px 28px rgba(255, 94, 98, 0.5);
 }
 
+/* Telefon-/Nanni-Icon: immer sichtbar, nie unter WhatsApp, bleibt beim Scrollen */
+.floating-phone-nanni {
+    position: fixed !important;
+    bottom: 24px !important;
+    left: 24px !important;
+    z-index: 10050 !important;
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    pointer-events: auto;
+}
+.floating-btn-whatsapp {
+    z-index: 10050 !important;
+}
+.nanni-btn-float {
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 6px 24px rgba(0, 180, 216, 0.5);
+}
+@media (max-width: 480px) {
+    .floating-phone-nanni {
+        left: max(16px, env(safe-area-inset-left)) !important;
+        bottom: max(20px, env(safe-area-inset-bottom)) !important;
+    }
+    .floating-btn-whatsapp {
+        right: max(16px, env(safe-area-inset-right)) !important;
+        bottom: max(20px, env(safe-area-inset-bottom)) !important;
+    }
+}
+
 /* ===== VOICE INTERFACE (Nanni) ===== */
 .voice-interface {
     background: linear-gradient(135deg, rgba(15, 15, 15, 0.95), rgba(5, 5, 5, 0.98));
