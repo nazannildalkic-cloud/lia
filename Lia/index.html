@@ -867,12 +867,6 @@
                             <div class="honeypot-wrap" aria-hidden="true">
                                 <input type="text" name="website_url_honeypot" tabindex="-1" autocomplete="off">
                             </div>
-                            <div class="form-group">
-                                <label id="label-captcha" for="captcha-input">Sicherheitsfrage: Was ist 3 + 4?</label>
-                                <input type="text" id="captcha-input" name="captcha" placeholder="7" required
-                                    pattern="7" title="Bitte lösen Sie die Rechenaufgabe (3 + 4 = 7)"
-                                    inputmode="numeric" autocomplete="off">
-                            </div>
 
                             <button type="submit" class="btn btn-primary" id="btn-send-msg"
                                 style="width: 100%; margin-top: 20px;">Nachricht senden</button>
@@ -987,17 +981,17 @@
         </div>
     </div>
     <!-- WhatsApp: rechts, immer sichtbar beim Scrollen -->
-    <a href="https://wa.me/491776480485" target="_blank" id="whatsapp-float" class="floating-btn-whatsapp"
+    <a href="https://wa.me/491776480485" target="_blank" id="whatsapp-float" class="floating-btn-whatsapp" title="Live"
         style="position: fixed; bottom: 24px; right: 24px; z-index: 10050; width: 56px; height: 56px; background: #25D366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-decoration: none;"
         onmouseover="this.style.transform='scale(1.1) translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(37, 211, 102, 0.6)';"
-        onmouseout="this.style.transform='scale(1) translateY(0)';">
+        onmouseout="this.style.transform='scale(1) translateY(0)';" aria-label="WhatsApp – Live">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Telefon / Nanni (Sprechen): links, immer sichtbar, nie unter WhatsApp -->
+    <!-- Nanni: kurz „Nanni, that's it!“ + Icon. Immer sichtbar. -->
     <div id="nanni-floating-container" class="nanni-float floating-phone-nanni" style="position: fixed; bottom: 24px; left: 24px; z-index: 10050;">
-        <p id="nanni-status" class="nanni-status">Frag Nanni</p>
-        <a href="#" id="nanni-voice-btn" class="nanni-btn nanni-btn-float" aria-label="Mit Nanni sprechen">
+        <p id="nanni-status" class="nanni-status">Nanni, that's it!</p>
+        <a href="#" id="nanni-voice-btn" class="nanni-btn nanni-btn-float" aria-label="Nanni – Live">
             <i class="fas fa-microphone"></i>
         </a>
     </div>
