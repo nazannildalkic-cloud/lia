@@ -825,8 +825,9 @@
                 setStatus(T[currentLang].connecting);
                 btn.disabled = true;
                 /* language = de|en|tr → Nanni grüßt und antwortet in gewählter Sprache (Vapi-Dashboard: {{language}}) */
-                /* transcriber: multi → Nanni versteht Deutsch, Englisch und Türkisch (Spracherkennung) */
+                /* language_strict → verhindert Umspringen auf Englisch/Spanisch bei Türkisch */
                 var variableValues = { language: String(currentLang) };
+                if (currentLang === 'tr') variableValues.language_strict = 'Türkçe only. Never use English or Spanish.';
                 var transcriber = { provider: 'deepgram', model: 'nova-2', language: 'multi' };
                 vapi.start(assistantId, { variableValues: variableValues, transcriber: transcriber }).catch(function(err) {
                     console.error('Vapi error', err);
