@@ -965,6 +965,24 @@ nav a.active {
         right: max(16px, env(safe-area-inset-right)) !important;
         bottom: max(20px, env(safe-area-inset-bottom)) !important;
     }
+    .nanni-status {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+        max-width: 120px;
+    }
+}
+
+/* Handy: Inhalt nicht von schwebenden Buttons verdecken */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 100px;
+    }
+    .floating-phone-nanni .nanni-btn,
+    .floating-btn-whatsapp {
+        min-width: 48px;
+        min-height: 48px;
+        -webkit-tap-highlight-color: transparent;
+    }
 }
 
 /* ===== VOICE INTERFACE (Nanni) ===== */
@@ -1221,6 +1239,16 @@ footer p {
 }
 
 /* ===== RESPONSIVE – HANDY TAUGLICH ===== */
+@media (max-width: 768px) {
+    html {
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+    }
+    body {
+        overflow-x: hidden;
+    }
+}
+
 @media (max-width: 992px) {
     .hero-grid {
         grid-template-columns: 1fr;
